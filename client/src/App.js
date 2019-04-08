@@ -52,11 +52,19 @@ class App extends Component {
     this.handleRegisterFormChange = this.handleRegisterFormChange.bind(this);
   }
   async componentDidMount() {
-    const currentUser = await verifyToken();
-    this.setState((prevState, newState) => ({
-      currentUser
-    }))
+    try {
+    const {user} = await verifyToken();
+    if (user !== undefined) {
+      this.setState({
+        currentUser: user
+      })
+    } else {
+      this.props.history.push('/');
+    }
+  } catch (e) {
+    this.props.history.push('/');
   }
+}
   async handleLogin(e) {
     e.preventDefault();
     const { user } = await loginUser(this.state.loginFormData);

@@ -17,7 +17,7 @@ export const registerUser = async (user) => {
   const { data } = resp;
 
   updateToken(data.token);
-
+  console.log(data)
   return data;
 };
 
@@ -35,6 +35,7 @@ export const verifyToken = async () => {
         }
       });
       updateToken(token);
+      console.log(resp.data)
       return resp.data;
     } catch (e) {
       console.log(e);
