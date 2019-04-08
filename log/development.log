@@ -7141,3 +7141,11 @@ Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
 
 
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users/login" for ::1 at 2019-04-08 16:51:07 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"email"=>"danthomp507@gmail.com", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]", "email"=>"danthomp507@gmail.com"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danthomp507@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:9
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+

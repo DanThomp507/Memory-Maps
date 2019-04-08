@@ -1,4 +1,4 @@
-# Memory-Maps
+## Project Proposal
 
 ## Description/User Story
 
@@ -26,12 +26,11 @@ the places they've been and access them at a later date.
 - Ruby/Ruby on Rails
 - PostgreSQL
 - Google Maps React
-- AWS (for images if it's feasible)
 
 ## MVP
   - Creating a user profile
   - The ability to edit user profile information
-  - Favoriting/marking which countries the user has visited
+  - Marking which countries the user has visited
   - Adding mini-blog posts/blurbs to a country's profile page
   - Updating/Deleting blurbs on a country's page
   - Adding comments to a country's page pertaining to favorite foods, cities,
