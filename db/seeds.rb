@@ -1,251 +1,247 @@
-Country.create(iso:"AD",name:"Andorra")
-Country.create(iso:"AE",name:"United Arab Emirates")
-Country.create(iso:"AF",name:"Afghanistan")
-Country.create(iso:"AG",name:"Antigua and Barbuda")
-Country.create(iso:"AI",name:"Anguilla")
-Country.create(iso:"AL",name:"Albania")
-Country.create(iso:"AM",name:"Armenia")
-Country.create(iso:"AO",name:"Angola")
-Country.create(iso:"AQ",name:"Antarctica")
-Country.create(iso:"AR",name:"Argentina")
-Country.create(iso:"AS",name:"American Samoa")
-Country.create(iso:"AT",name:"Austria")
-Country.create(iso:"AU",name:"Australia")
-Country.create(iso:"AW",name:"Aruba")
-Country.create(iso:"AX",name:"Aland Islands")
-Country.create(iso:"AZ",name:"Azerbaijan")
-Country.create(iso:"BA",name:"Bosnia and Herzegovina")
-Country.create(iso:"BB",name:"Barbados")
-Country.create(iso:"BD",name:"Bangladesh")
-Country.create(iso:"BE",name:"Belgium")
-Country.create(iso:"BF",name:"Burkina Faso")
-Country.create(iso:"BG",name:"Bulgaria")
-Country.create(iso:"BH",name:"Bahrain")
-Country.create(iso:"BI",name:"Burundi")
-Country.create(iso:"BJ",name:"Benin")
-Country.create(iso:"BL",name:"Saint Barthelemy")
-Country.create(iso:"BM",name:"Bermuda")
-Country.create(iso:"BN",name:"Brunei")
-Country.create(iso:"BO",name:"Bolivia")
-Country.create(iso:"BQ",name:"Bonaire, Saint Eustatius and Saba ")
-Country.create(iso:"BR",name:"Brazil")
-Country.create(iso:"BS",name:"Bahamas")
-Country.create(iso:"BT",name:"Bhutan")
-Country.create(iso:"BV",name:"Bouvet Island")
-Country.create(iso:"BW",name:"Botswana")
-Country.create(iso:"BY",name:"Belarus")
-Country.create(iso:"BZ",name:"Belize")
-Country.create(iso:"CA",name:"Canada")
-Country.create(iso:"CC",name:"Cocos Islands")
-Country.create(iso:"CD",name:"Democratic Republic of the Congo")
-Country.create(iso:"CF",name:"Central African Republic")
-Country.create(iso:"CG",name:"Republic of the Congo")
-Country.create(iso:"CH",name:"Switzerland")
-Country.create(iso:"CI",name:"Ivory Coast")
-Country.create(iso:"CK",name:"Cook Islands")
-Country.create(iso:"CL",name:"Chile")
-Country.create(iso:"CM",name:"Cameroon")
-Country.create(iso:"CN",name:"China")
-Country.create(iso:"CO",name:"Colombia")
-Country.create(iso:"CR",name:"Costa Rica")
-Country.create(iso:"CU",name:"Cuba")
-Country.create(iso:"CV",name:"Cape Verde")
-Country.create(iso:"CW",name:"Curacao")
-Country.create(iso:"CX",name:"Christmas Island")
-Country.create(iso:"CY",name:"Cyprus")
-Country.create(iso:"CZ",name:"Czech Republic")
-Country.create(iso:"DE",name:"Germany")
-Country.create(iso:"DJ",name:"Djibouti")
-Country.create(iso:"DK",name:"Denmark")
-Country.create(iso:"DM",name:"Dominica")
-Country.create(iso:"DO",name:"Dominican Republic")
-Country.create(iso:"DZ",name:"Algeria")
-Country.create(iso:"EC",name:"Ecuador")
-Country.create(iso:"EE",name:"Estonia")
-Country.create(iso:"EG",name:"Egypt")
-Country.create(iso:"EH",name:"Western Sahara")
-Country.create(iso:"ER",name:"Eritrea")
-Country.create(iso:"ES",name:"Spain")
-Country.create(iso:"ET",name:"Ethiopia")
-Country.create(iso:"FI",name:"Finland")
-Country.create(iso:"FJ",name:"Fiji")
-Country.create(iso:"FK",name:"Falkland Islands")
-Country.create(iso:"FM",name:"Micronesia")
-Country.create(iso:"FO",name:"Faroe Islands")
-Country.create(iso:"FR",name:"France")
-Country.create(iso:"GA",name:"Gabon")
-Country.create(iso:"GB",name:"United Kingdom")
-Country.create(iso:"GD",name:"Grenada")
-Country.create(iso:"GE",name:"Georgia")
-Country.create(iso:"GF",name:"French Guiana")
-Country.create(iso:"GG",name:"Guernsey")
-Country.create(iso:"GH",name:"Ghana")
-Country.create(iso:"GI",name:"Gibraltar")
-Country.create(iso:"GL",name:"Greenland")
-Country.create(iso:"GM",name:"Gambia")
-Country.create(iso:"GN",name:"Guinea")
-Country.create(iso:"GP",name:"Guadeloupe")
-Country.create(iso:"GQ",name:"Equatorial Guinea")
-Country.create(iso:"GR",name:"Greece")
-Country.create(iso:"GS",name:"South Georgia and the South Sandwich Islands")
-Country.create(iso:"GT",name:"Guatemala")
-Country.create(iso:"GU",name:"Guam")
-Country.create(iso:"GW",name:"Guinea-Bissau")
-Country.create(iso:"GY",name:"Guyana")
-Country.create(iso:"HK",name:"Hong Kong")
-Country.create(iso:"HM",name:"Heard Island and McDonald Islands")
-Country.create(iso:"HN",name:"Honduras")
-Country.create(iso:"HR",name:"Croatia")
-Country.create(iso:"HT",name:"Haiti")
-Country.create(iso:"HU",name:"Hungary")
-Country.create(iso:"ID",name:"Indonesia")
-Country.create(iso:"IE",name:"Ireland")
-Country.create(iso:"IL",name:"Israel")
-Country.create(iso:"IM",name:"Isle of Man")
-Country.create(iso:"IN",name:"India")
-Country.create(iso:"IO",name:"British Indian Ocean Territory")
-Country.create(iso:"IQ",name:"Iraq")
-Country.create(iso:"IR",name:"Iran")
-Country.create(iso:"IS",name:"Iceland")
-Country.create(iso:"IT",name:"Italy")
-Country.create(iso:"JE",name:"Jersey")
-Country.create(iso:"JM",name:"Jamaica")
-Country.create(iso:"JO",name:"Jordan")
-Country.create(iso:"JP",name:"Japan")
-Country.create(iso:"KE",name:"Kenya")
-Country.create(iso:"KG",name:"Kyrgyzstan")
-Country.create(iso:"KH",name:"Cambodia")
-Country.create(iso:"KI",name:"Kiribati")
-Country.create(iso:"KM",name:"Comoros")
-Country.create(iso:"KN",name:"Saint Kitts and Nevis")
-Country.create(iso:"KP",name:"North Korea")
-Country.create(iso:"KR",name:"South Korea")
-Country.create(iso:"XK",name:"Kosovo")
-Country.create(iso:"KW",name:"Kuwait")
-Country.create(iso:"KY",name:"Cayman Islands")
-Country.create(iso:"KZ",name:"Kazakhstan")
-Country.create(iso:"LA",name:"Laos")
-Country.create(iso:"LB",name:"Lebanon")
-Country.create(iso:"LC",name:"Saint Lucia")
-Country.create(iso:"LI",name:"Liechtenstein")
-Country.create(iso:"LK",name:"Sri Lanka")
-Country.create(iso:"LR",name:"Liberia")
-Country.create(iso:"LS",name:"Lesotho")
-Country.create(iso:"LT",name:"Lithuania")
-Country.create(iso:"LU",name:"Luxembourg")
-Country.create(iso:"LV",name:"Latvia")
-Country.create(iso:"LY",name:"Libya")
-Country.create(iso:"MA",name:"Morocco")
-Country.create(iso:"MC",name:"Monaco")
-Country.create(iso:"MD",name:"Moldova")
-Country.create(iso:"ME",name:"Montenegro")
-Country.create(iso:"MF",name:"Saint Martin")
-Country.create(iso:"MG",name:"Madagascar")
-Country.create(iso:"MH",name:"Marshall Islands")
-Country.create(iso:"MK",name:"Macedonia")
-Country.create(iso:"ML",name:"Mali")
-Country.create(iso:"MM",name:"Myanmar")
-Country.create(iso:"MN",name:"Mongolia")
-Country.create(iso:"MO",name:"Macao")
-Country.create(iso:"MP",name:"Northern Mariana Islands")
-Country.create(iso:"MQ",name:"Martinique")
-Country.create(iso:"MR",name:"Mauritania")
-Country.create(iso:"MS",name:"Montserrat")
-Country.create(iso:"MT",name:"Malta")
-Country.create(iso:"MU",name:"Mauritius")
-Country.create(iso:"MV",name:"Maldives")
-Country.create(iso:"MW",name:"Malawi")
-Country.create(iso:"MX",name:"Mexico")
-Country.create(iso:"MY",name:"Malaysia")
-Country.create(iso:"MZ",name:"Mozambique")
-Country.create(iso:"NA",name:"Namibia")
-Country.create(iso:"NC",name:"New Caledonia")
-Country.create(iso:"NE",name:"Niger")
-Country.create(iso:"NF",name:"Norfolk Island")
-Country.create(iso:"NG",name:"Nigeria")
-Country.create(iso:"NI",name:"Nicaragua")
-Country.create(iso:"NL",name:"Netherlands")
-Country.create(iso:"NO",name:"Norway")
-Country.create(iso:"NP",name:"Nepal")
-Country.create(iso:"NR",name:"Nauru")
-Country.create(iso:"NU",name:"Niue")
-Country.create(iso:"NZ",name:"New Zealand")
-Country.create(iso:"OM",name:"Oman")
-Country.create(iso:"PA",name:"Panama")
-Country.create(iso:"PE",name:"Peru")
-Country.create(iso:"PF",name:"French Polynesia")
-Country.create(iso:"PG",name:"Papua New Guinea")
-Country.create(iso:"PH",name:"Philippines")
-Country.create(iso:"PK",name:"Pakistan")
-Country.create(iso:"PL",name:"Poland")
-Country.create(iso:"PM",name:"Saint Pierre and Miquelon")
-Country.create(iso:"PN",name:"Pitcairn")
-Country.create(iso:"PR",name:"Puerto Rico")
-Country.create(iso:"PS",name:"Palestinian Territory")
-Country.create(iso:"PT",name:"Portugal")
-Country.create(iso:"PW",name:"Palau")
-Country.create(iso:"PY",name:"Paraguay")
-Country.create(iso:"QA",name:"Qatar")
-Country.create(iso:"RE",name:"Reunion")
-Country.create(iso:"RO",name:"Romania")
-Country.create(iso:"RS",name:"Serbia")
-Country.create(iso:"RU",name:"Russia")
-Country.create(iso:"RW",name:"Rwanda")
-Country.create(iso:"SA",name:"Saudi Arabia")
-Country.create(iso:"SB",name:"Solomon Islands")
-Country.create(iso:"SC",name:"Seychelles")
-Country.create(iso:"SD",name:"Sudan")
-Country.create(iso:"SE",name:"Sweden")
-Country.create(iso:"SG",name:"Singapore")
-Country.create(iso:"SH",name:"Saint Helena")
-Country.create(iso:"SI",name:"Slovenia")
-Country.create(iso:"SJ",name:"Svalbard and Jan Mayen")
-Country.create(iso:"SK",name:"Slovakia")
-Country.create(iso:"SL",name:"Sierra Leone")
-Country.create(iso:"SM",name:"San Marino")
-Country.create(iso:"SN",name:"Senegal")
-Country.create(iso:"SO",name:"Somalia")
-Country.create(iso:"SR",name:"Suriname")
-Country.create(iso:"ST",name:"Sao Tome and Principe")
-Country.create(iso:"SV",name:"El Salvador")
-Country.create(iso:"SX",name:"Sint Maarten")
-Country.create(iso:"SY",name:"Syria")
-Country.create(iso:"SZ",name:"Swaziland")
-Country.create(iso:"TC",name:"Turks and Caicos Islands")
-Country.create(iso:"TD",name:"Chad")
-Country.create(iso:"TF",name:"French Southern Territories")
-Country.create(iso:"TG",name:"Togo")
-Country.create(iso:"TH",name:"Thailand")
-Country.create(iso:"TJ",name:"Tajikistan")
-Country.create(iso:"TK",name:"Tokelau")
-Country.create(iso:"TL",name:"East Timor")
-Country.create(iso:"TM",name:"Turkmenistan")
-Country.create(iso:"TN",name:"Tunisia")
-Country.create(iso:"TO",name:"Tonga")
-Country.create(iso:"TR",name:"Turkey")
-Country.create(iso:"TT",name:"Trinidad and Tobago")
-Country.create(iso:"TV",name:"Tuvalu")
-Country.create(iso:"TW",name:"Taiwan")
-Country.create(iso:"TZ",name:"Tanzania")
-Country.create(iso:"UA",name:"Ukraine")
-Country.create(iso:"UG",name:"Uganda")
-Country.create(iso:"UM",name:"United States Minor Outlying Islands")
-Country.create(iso:"US",name:"United States")
-Country.create(iso:"UY",name:"Uruguay")
-Country.create(iso:"UZ",name:"Uzbekistan")
-Country.create(iso:"VA",name:"Vatican")
-Country.create(iso:"VC",name:"Saint Vincent and the Grenadines")
-Country.create(iso:"VE",name:"Venezuela")
-Country.create(iso:"VG",name:"British Virgin Islands")
-Country.create(iso:"VI",name:"U.S. Virgin Islands")
-Country.create(iso:"VN",name:"Vietnam")
-Country.create(iso:"VU",name:"Vanuatu")
-Country.create(iso:"WF",name:"Wallis and Futuna")
-Country.create(iso:"WS",name:"Samoa")
-Country.create(iso:"YE",name:"Yemen")
-Country.create(iso:"YT",name:"Mayotte")
-Country.create(iso:"ZA",name:"South Africa")
-Country.create(iso:"ZM",name:"Zambia")
-Country.create(iso:"ZW",name:"Zimbabwe")
-Country.create(iso:"CS",name:"Serbia and Montenegro")
-Country.create(iso:"AN",name:"Netherlands Antilles")
+Country.bulk_insert(:iso, :latitude, :longitude, :name) do |worker|
+
+             worker.add ['AD', 42.546245, 1.601554, 'Andorra']
+             worker.add ['AE', 23.424076, 53.847818, 'United Arab Emirates']
+             worker.add ['AF', 33.93911, 67.709953, 'Afghanistan']
+             worker.add ['AG', 17.060816, -61.796428, 'Antigua and Barbuda']
+             worker.add ['AI', 18.220554, -63.068615, 'Anguilla']
+             worker.add ['AL', 41.153332, 20.168331, 'Albania']
+             worker.add ['AM', 40.069099, 45.038189, 'Armenia']
+             worker.add ['AN', 12.226079, -69.060087, 'Netherlands Antilles']
+             worker.add ['AO', -11.202692, 17.873887, 'Angola']
+             worker.add ['AQ', -75.250973, -0.071389, 'Antarctica']
+             worker.add ['AR', -38.416097, -63.616672, 'Argentina']
+             worker.add ['AS', -14.270972, -170.132217, 'American Samoa']
+             worker.add ['AT', 47.516231, 14.550072, 'Austria']
+             worker.add ['AU', -25.274398, 133.775136, 'Australia']
+             worker.add ['AW', 12.52111, -69.968338, 'Aruba']
+             worker.add ['AZ', 40.143105, 47.576927, 'Azerbaijan']
+             worker.add ['BA', 43.915886, 17.679076, 'Bosnia and Herzegovina']
+             worker.add ['BB', 13.193887, -59.543198, 'Barbados']
+             worker.add ['BD', 23.684994, 90.356331, 'Bangladesh']
+             worker.add ['BE', 50.503887, 4.469936, 'Belgium']
+             worker.add ['BF', 12.238333, -1.561593, 'Burkina Faso']
+             worker.add ['BG', 42.733883, 25.48583, 'Bulgaria']
+             worker.add ['BH', 25.930414, 50.637772, 'Bahrain']
+             worker.add ['BI', -3.373056, 29.918886, 'Burundi']
+             worker.add ['BJ', 9.30769, 2.315834, 'Benin']
+             worker.add ['BM', 32.321384, -64.75737, 'Bermuda']
+             worker.add ['BN', 4.535277, 114.727669, 'Brunei']
+             worker.add ['BO', -16.290154, -63.588653, 'Bolivia']
+             worker.add ['BR', -14.235004, -51.92528, 'Brazil']
+             worker.add ['BS', 25.03428, -77.39628, 'Bahamas']
+             worker.add ['BT', 27.514162, 90.433601, 'Bhutan']
+             worker.add ['BV', -54.423199, 3.413194, 'Bouvet Island']
+             worker.add ['BW', -22.328474, 24.684866, 'Botswana']
+             worker.add ['BY', 53.709807, 27.953389, 'Belarus']
+             worker.add ['BZ', 17.189877, -88.49765, 'Belize']
+             worker.add ['CA', 56.130366, -106.346771, 'Canada']
+             worker.add ['CC', -12.164165, 96.870956, 'Cocos [Keeling] Islands']
+             worker.add ['CD', -4.038333, 21.758664, 'Congo [DRC]']
+             worker.add ['CF', 6.611111, 20.939444, 'Central African Republic']
+             worker.add ['CG', -0.228021, 15.827659, 'Congo [Republic]']
+             worker.add ['CH', 46.818188, 8.227512, 'Switzerland']
+             worker.add ['CI', 7.539989, -5.54708, 'Côte d''Ivoire']
+             worker.add ['CK', -21.236736, -159.777671, 'Cook Islands']
+             worker.add ['CL', -35.675147, -71.542969, 'Chile']
+             worker.add ['CM', 7.369722, 12.354722, 'Cameroon']
+             worker.add ['CN', 35.86166, 104.195397, 'China']
+             worker.add ['CO', 4.570868, -74.297333, 'Colombia']
+             worker.add ['CR', 9.748917, -83.753428, 'Costa Rica']
+             worker.add ['CU', 21.521757, -77.781167, 'Cuba']
+             worker.add ['CV', 16.002082, -24.013197, 'Cape Verde']
+             worker.add ['CX', -10.447525, 105.690449, 'Christmas Island']
+             worker.add ['CY', 35.126413, 33.429859, 'Cyprus']
+             worker.add ['CZ', 49.817492, 15.472962, 'Czech Republic']
+             worker.add ['DE', 51.165691, 10.451526, 'Germany']
+             worker.add ['DJ', 11.825138, 42.590275, 'Djibouti']
+             worker.add ['DK', 56.26392, 9.501785, 'Denmark']
+             worker.add ['DM', 15.414999, -61.370976, 'Dominica']
+             worker.add ['DO', 18.735693, -70.162651, 'Dominican Republic']
+             worker.add ['DZ', 28.033886, 1.659626, 'Algeria']
+             worker.add ['EC', -1.831239, -78.183406, 'Ecuador']
+             worker.add ['EE', 58.595272, 25.013607, 'Estonia']
+             worker.add ['EG', 26.820553, 30.802498, 'Egypt']
+             worker.add ['EH', 24.215527, -12.885834, 'Western Sahara']
+             worker.add ['ER', 15.179384, 39.782334, 'Eritrea']
+             worker.add ['ES', 40.463667, -3.74922, 'Spain']
+             worker.add ['ET', 9.145, 40.489673, 'Ethiopia']
+             worker.add ['FI', 61.92411, 25.748151, 'Finland']
+             worker.add ['FJ', -16.578193, 179.414413, 'Fiji']
+             worker.add ['FK', -51.796253, -59.523613, 'Falkland Islands [Islas Malvinas]']
+             worker.add ['FM', 7.425554, 150.550812, 'Micronesia']
+             worker.add ['FO', 61.892635, -6.911806, 'Faroe Islands']
+             worker.add ['FR', 46.227638, 2.213749, 'France']
+             worker.add ['GA', -0.803689, 11.609444, 'Gabon']
+             worker.add ['GB', 55.378051, -3.435973, 'United Kingdom']
+             worker.add ['GD', 12.262776, -61.604171, 'Grenada']
+             worker.add ['GE', 42.315407, 43.356892, 'Georgia']
+             worker.add ['GF', 3.933889, -53.125782, 'French Guiana']
+             worker.add ['GG', 49.465691, -2.585278, 'Guernsey']
+             worker.add ['GH', 7.946527, -1.023194, 'Ghana']
+             worker.add ['GI', 36.137741, -5.345374, 'Gibraltar']
+             worker.add ['GL', 71.706936, -42.604303, 'Greenland']
+             worker.add ['GM', 13.443182, -15.310139, 'Gambia']
+             worker.add ['GN', 9.945587, -9.696645, 'Guinea']
+             worker.add ['GP', 16.995971, -62.067641, 'Guadeloupe']
+             worker.add ['GQ', 1.650801, 10.267895, 'Equatorial Guinea']
+             worker.add ['GR', 39.074208, 21.824312, 'Greece']
+             worker.add ['GS', -54.429579, -36.587909, 'South Georgia and the South Sandwich Islands']
+             worker.add ['GT', 15.783471, -90.230759, 'Guatemala']
+             worker.add ['GU', 13.444304, 144.793731, 'Guam']
+             worker.add ['GW', 11.803749, -15.180413, 'Guinea-Bissau']
+             worker.add ['GY', 4.860416, -58.93018, 'Guyana']
+             worker.add ['GZ', 31.354676, 34.308825, 'Gaza Strip']
+             worker.add ['HK', 22.396428, 114.109497, 'Hong Kong']
+             worker.add ['HM', -53.08181, 73.504158, 'Heard Island and McDonald Islands']
+             worker.add ['HN', 15.199999, -86.241905, 'Honduras']
+             worker.add ['HR', 45.1, 15.2, 'Croatia']
+             worker.add ['HT', 18.971187, -72.285215, 'Haiti']
+             worker.add ['HU', 47.162494, 19.503304, 'Hungary']
+             worker.add ['ID', -0.789275, 113.921327, 'Indonesia']
+             worker.add ['IE', 53.41291, -8.24389, 'Ireland']
+             worker.add ['IL', 31.046051, 34.851612, 'Israel']
+             worker.add ['IM', 54.236107, -4.548056, 'Isle of Man']
+             worker.add ['IN', 20.593684, 78.96288, 'India']
+             worker.add ['IO', -6.343194, 71.876519, 'British Indian Ocean Territory']
+             worker.add ['IQ', 33.223191, 43.679291, 'Iraq']
+             worker.add ['IR', 32.427908, 53.688046, 'Iran']
+             worker.add ['IS', 64.963051, -19.020835, 'Iceland']
+             worker.add ['IT', 41.87194, 12.56738, 'Italy']
+             worker.add ['JE', 49.214439, -2.13125, 'Jersey']
+             worker.add ['JM', 18.109581, -77.297508, 'Jamaica']
+             worker.add ['JO', 30.585164, 36.238414, 'Jordan']
+             worker.add ['JP', 36.204824, 138.252924, 'Japan']
+             worker.add ['KE', -0.023559, 37.906193, 'Kenya']
+             worker.add ['KG', 41.20438, 74.766098, 'Kyrgyzstan']
+             worker.add ['KH', 12.565679, 104.990963, 'Cambodia']
+             worker.add ['KI', -3.370417, -168.734039, 'Kiribati']
+             worker.add ['KM', -11.875001, 43.872219, 'Comoros']
+             worker.add ['KN', 17.357822, -62.782998, 'Saint Kitts and Nevis']
+             worker.add ['KP', 40.339852, 127.510093, 'North Korea']
+             worker.add ['KR', 35.907757, 127.766922, 'South Korea']
+             worker.add ['KW', 29.31166, 47.481766, 'Kuwait']
+             worker.add ['KY', 19.513469, -80.566956, 'Cayman Islands']
+             worker.add ['KZ', 48.019573, 66.923684, 'Kazakhstan']
+             worker.add ['LA', 19.85627, 102.495496, 'Laos']
+             worker.add ['LB', 33.854721, 35.862285, 'Lebanon']
+             worker.add ['LC', 13.909444, -60.978893, 'Saint Lucia']
+             worker.add ['LI', 47.166, 9.555373, 'Liechtenstein']
+             worker.add ['LK', 7.873054, 80.771797, 'Sri Lanka']
+             worker.add ['LR', 6.428055, -9.429499, 'Liberia']
+             worker.add ['LS', -29.609988, 28.233608, 'Lesotho']
+             worker.add ['LT', 55.169438, 23.881275, 'Lithuania']
+             worker.add ['LU', 49.815273, 6.129583, 'Luxembourg']
+             worker.add ['LV', 56.879635, 24.603189, 'Latvia']
+             worker.add ['LY', 26.3351, 17.228331, 'Libya']
+             worker.add ['MA', 31.791702, -7.09262, 'Morocco']
+             worker.add ['MC', 43.750298, 7.412841, 'Monaco']
+             worker.add ['MD', 47.411631, 28.369885, 'Moldova']
+             worker.add ['ME', 42.708678, 19.37439, 'Montenegro']
+             worker.add ['MG', -18.766947, 46.869107, 'Madagascar']
+             worker.add ['MH', 7.131474, 171.184478, 'Marshall Islands']
+             worker.add ['MK', 41.608635, 21.745275, 'Macedonia [FYROM]']
+             worker.add ['ML', 17.570692, -3.996166, 'Mali']
+             worker.add ['MM', 21.913965, 95.956223, 'Myanmar [Burma]']
+             worker.add ['MN', 46.862496, 103.846656, 'Mongolia']
+             worker.add ['MO', 22.198745, 113.543873, 'Macau']
+             worker.add ['MP', 17.33083, 145.38469, 'Northern Mariana Islands']
+             worker.add ['MQ', 14.641528, -61.024174, 'Martinique']
+             worker.add ['MR', 21.00789, -10.940835, 'Mauritania']
+             worker.add ['MS', 16.742498, -62.187366, 'Montserrat']
+             worker.add ['MT', 35.937496, 14.375416, 'Malta']
+             worker.add ['MU', -20.348404, 57.552152, 'Mauritius']
+             worker.add ['MV', 3.202778, 73.22068, 'Maldives']
+             worker.add ['MW', -13.254308, 34.301525, 'Malawi']
+             worker.add ['MX', 23.634501, -102.552784, 'Mexico']
+             worker.add ['MY', 4.210484, 101.975766, 'Malaysia']
+             worker.add ['MZ', -18.665695, 35.529562, 'Mozambique']
+             worker.add ['NA', -22.95764, 18.49041, 'Namibia']
+             worker.add ['NC', -20.904305, 165.618042, 'New Caledonia']
+             worker.add ['NE', 17.607789, 8.081666, 'Niger']
+             worker.add ['NF', -29.040835, 167.954712, 'Norfolk Island']
+             worker.add ['NG', 9.081999, 8.675277, 'Nigeria']
+             worker.add ['NI', 12.865416, -85.207229, 'Nicaragua']
+             worker.add ['NL', 52.132633, 5.291266, 'Netherlands']
+             worker.add ['NO', 60.472024, 8.468946, 'Norway']
+             worker.add ['NP', 28.394857, 84.124008, 'Nepal']
+             worker.add ['NR', -0.522778, 166.931503, 'Nauru']
+             worker.add ['NU', -19.054445, -169.867233, 'Niue']
+             worker.add ['NZ', -40.900557, 174.885971, 'New Zealand']
+             worker.add ['OM', 21.512583, 55.923255, 'Oman']
+             worker.add ['PA', 8.537981, -80.782127, 'Panama']
+             worker.add ['PE', -9.189967, -75.015152, 'Peru']
+             worker.add ['PF', -17.679742, -149.406843, 'French Polynesia']
+             worker.add ['PG', -6.314993, 143.95555, 'Papua New Guinea']
+             worker.add ['PH', 12.879721, 121.774017, 'Philippines']
+             worker.add ['PK', 30.375321, 69.345116, 'Pakistan']
+             worker.add ['PL', 51.919438, 19.145136, 'Poland']
+             worker.add ['PM', 46.941936, -56.27111, 'Saint Pierre and Miquelon']
+             worker.add ['PN', -24.703615, -127.439308, 'Pitcairn Islands']
+             worker.add ['PR', 18.220833, -66.590149, 'Puerto Rico']
+             worker.add ['PS', 31.952162, 35.233154, 'Palestinian Territories']
+             worker.add ['PT', 39.399872, -8.224454, 'Portugal']
+             worker.add ['PW', 7.51498, 134.58252, 'Palau']
+             worker.add ['PY', -23.442503, -58.443832, 'Paraguay']
+             worker.add ['QA', 25.354826, 51.183884, 'Qatar']
+             worker.add ['RE', -21.115141, 55.536384, 'Réunion']
+             worker.add ['RO', 45.943161, 24.96676, 'Romania']
+             worker.add ['RS', 44.016521, 21.005859, 'Serbia']
+             worker.add ['RU', 61.52401, 105.318756, 'Russia']
+             worker.add ['RW', -1.940278, 29.873888, 'Rwanda']
+             worker.add ['SA', 23.885942, 45.079162, 'Saudi Arabia']
+             worker.add ['SB', -9.64571, 160.156194, 'Solomon Islands']
+             worker.add ['SC', -4.679574, 55.491977, 'Seychelles']
+             worker.add ['SD', 12.862807, 30.217636, 'Sudan']
+             worker.add ['SE', 60.128161, 18.643501, 'Sweden']
+             worker.add ['SG', 1.352083, 103.819836, 'Singapore']
+             worker.add ['SH', -24.143474, -10.030696, 'Saint Helena']
+             worker.add ['SI', 46.151241, 14.995463, 'Slovenia']
+             worker.add ['SJ', 77.553604, 23.670272, 'Svalbard and Jan Mayen']
+             worker.add ['SK', 48.669026, 19.699024, 'Slovakia']
+             worker.add ['SL', 8.460555, -11.779889, 'Sierra Leone']
+             worker.add ['SM', 43.94236, 12.457777, 'San Marino']
+             worker.add ['SN', 14.497401, -14.452362, 'Senegal']
+             worker.add ['SO', 5.152149, 46.199616, 'Somalia']
+             worker.add ['SR', 3.919305, -56.027783, 'Suriname']
+             worker.add ['ST', 0.18636, 6.613081, 'São Tomé and Príncipe']
+             worker.add ['SV', 13.794185, -88.89653, 'El Salvador']
+             worker.add ['SY', 34.802075, 38.996815, 'Syria']
+             worker.add ['SZ', -26.522503, 31.465866, 'Swaziland']
+             worker.add ['TC', 21.694025, -71.797928, 'Turks and Caicos Islands']
+             worker.add ['TD', 15.454166, 18.732207, 'Chad']
+             worker.add ['TF', -49.280366, 69.348557, 'French Southern Territories']
+             worker.add ['TG', 8.619543, 0.824782, 'Togo']
+             worker.add ['TH', 15.870032, 100.992541, 'Thailand']
+             worker.add ['TJ', 38.861034, 71.276093, 'Tajikistan']
+             worker.add ['TK', -8.967363, -171.855881, 'Tokelau']
+             worker.add ['TL', -8.874217, 125.727539, 'Timor-Leste']
+             worker.add ['TM', 38.969719, 59.556278, 'Turkmenistan']
+             worker.add ['TN', 33.886917, 9.537499, 'Tunisia']
+             worker.add ['TO', -21.178986, -175.198242, 'Tonga']
+             worker.add ['TR', 38.963745, 35.243322, 'Turkey']
+             worker.add ['TT', 10.691803, -61.222503, 'Trinidad and Tobago']
+             worker.add ['TV', -7.109535, 177.64933, 'Tuvalu']
+             worker.add ['TW', 23.69781, 120.960515, 'Taiwan']
+             worker.add ['TZ', -6.369028, 34.888822, 'Tanzania']
+             worker.add ['UA', 48.379433, 31.16558, 'Ukraine']
+             worker.add ['UG', 1.373333, 32.290275, 'Uganda']
+             worker.add ['US', 37.09024, -95.712891, 'United States']
+             worker.add ['UY', -32.522779, -55.765835, 'Uruguay']
+             worker.add ['UZ', 41.377491, 64.585262, 'Uzbekistan']
+             worker.add ['VA', 41.902916, 12.453389, 'Vatican City']
+             worker.add ['VC', 12.984305, -61.287228, 'Saint Vincent and the Grenadines']
+             worker.add ['VE', 6.42375, -66.58973, 'Venezuela']
+             worker.add ['VG', 18.420695, -64.639968, 'British Virgin Islands']
+             worker.add ['VI', 18.335765, -64.896335, 'U.S. Virgin Islands']
+             worker.add ['VN', 14.058324, 108.277199, 'Vietnam']
+             worker.add ['VU', -15.376706, 166.959158, 'Vanuatu']
+             worker.add ['WF', -13.768752, -177.156097, 'Wallis and Futuna']
+             worker.add ['WS', -13.759029, -172.104629, 'Samoa']
+             worker.add ['XK', 42.602636, 20.902977, 'Kosovo']
+             worker.add ['YE', 15.552727, 48.516388, 'Yemen']
+             worker.add ['YT', -12.8275, 45.166244, 'Mayotte']
+             worker.add ['ZA', -30.559482, 22.937506, 'South Africa']
+             worker.add ['ZM', -13.133897, 27.849332, 'Zambia']
+             worker.add ['ZW', -19.015438, 29.154857, 'Zimbabwe']
+end
