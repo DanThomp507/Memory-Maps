@@ -1,9 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Map from './Map';
 
-const Home = props => {
+class Home extends Component {
+  constructor(){
+    super()
+  }
+  render(){
   return (
-    <h1>Welcome Home</h1>
-  )
+    <div>
+    <h1>Home Page </h1>
+    {
+    <Map />
+  }
+    </div>
+    )
+  }
 }
 export default Home;

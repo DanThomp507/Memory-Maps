@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default props => {
   const { toggle, show, email, password, onChange, onSubmit, onClick, register } = props;

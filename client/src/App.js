@@ -8,15 +8,18 @@ import Map from './components/Map.jsx';
 import LoginForm from './components/LoginForm.jsx';
 import UserForm from './components/UserForm.jsx';
 import Contact from './components/Contact.jsx';
+import CommentForm from './components/CommentForm.jsx';
 import Footer from './components/Footer.jsx';
 import LogOutForm from './components/LogOutForm.jsx';
+import UserProfile from './components/UserProfile.jsx';
 import {
   registerUser,
   editUser,
-  loginUser,
-  verifyToken,
+  loginUser
 } from "./services/users-helper.js";
-
+import {
+  createNewComment
+} from "./services/countries-helper.js"
 
 class App extends Component {
   constructor(props){
@@ -40,8 +43,9 @@ class App extends Component {
       email: "",
       password: ""
     },
+    countryData: [],
     toggleLogin: true,
-    currentUser: null,
+    currentUser: {},
     }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLoginClick = this.handleLoginClick.bind(this);
@@ -63,14 +67,20 @@ class App extends Component {
     }
   }
 
-  async handleLogin() {
-      const token = await loginUser(this.state.loginFormData);
-      const userData = decode(token.jwt)
-      this.setState({
-        currentUser: userData
-      })
-      localStorage.setItem("jwt", token.jwt)
-    }
+  async handleLogin(e) {
+    e.preventDefault();
+    const token = await loginUser(this.state.loginFormData);
+    const userData = decode(token.jwt)
+    this.setState({
+      loginFormData: {
+      email: "",
+      password: ""
+    },
+      currentUser: userData
+    })
+    localStorage.setItem("jwt", token.jwt)
+    this.props.history.push(`/home`);
+  }
 
 handleRegisterClick(e) {
   e.preventDefault();
@@ -84,7 +94,7 @@ handleLoginClick(e) {
   this.setState((prevState, newState) => ({
     toggleLogin: !prevState.toggleLogin
   }));
-  this.props.history.push(`/user/${this.state.currentUser.id}/username/${this.state.currentUser.username}`)
+  this.props.history.push(`/home`)
 }
 
 handleToggleLocalRegister(e) {
@@ -145,9 +155,8 @@ async handleEditUser(e) {
   this.setState((prevState, newState) => ({
     currentUser: currentUser.newUser,
   }));
-  debugger
 
-  this.props.history.push(`/user/${this.state.currentUser.id}/username/${this.state.currentUser.username}`);
+  this.props.history.push(`/user/edit`);
 }
 
 handleLogout() {
@@ -162,9 +171,11 @@ handleLogout() {
   render() {
     return (
       <div className="App">
+      <header>
       <h1 className="main-title">
-            <Link to="/">Memory Maps</Link>
+            <Link to="/home">Memory Maps</Link>
           </h1>
+      </header>
           <Route
         exact
         path="/"
@@ -172,7 +183,6 @@ handleLogout() {
           <>
             <LoginForm
               {...props}
-              // show={this.state.currentUser.id}
               toggle={this.state.toggleLogin}
               onChange={this.handleLoginFormChange}
               onSubmit={this.handleLogin}
@@ -185,7 +195,6 @@ handleLogout() {
             {...props}
             title={"Register User"}
             onClick={this.handleLoginClick}
-            // show={this.state.currentUser.id}
             toggle={this.state.toggleLogin}
             onChange={this.handleRegisterFormChange}
             onSubmit={this.handleRegister}
@@ -203,9 +212,66 @@ handleLogout() {
         )}
       />
       <Route
-          exact
-          path="/home"
-          render={Home}/>
+        exact
+        path="/user/profile"
+        render={props => (
+            <UserProfile
+              {...props}
+              showList={this.state.showList}
+              changeList={this.changeList}
+              currentUser={this.state.currentUser}
+              eventsList={this.state.eventsList}
+              hostingEventsList={this.state.hostingEventsList}
+            />
+        )}
+      />
+      <Route
+        exact
+        path="/home"
+        render={props => (
+          <Home
+            {...props}
+            className="home"
+            show={this.state.currentUser}
+            userData={this.state.userData}
+            history={this.props.history}
+          />
+        )}
+      />
+          <Route
+              exact
+              path="/user/edit/"
+              render={props => (
+                <UserForm
+                  {...props}
+                  title={"Edit User"}
+                  onClick={this.handleLoginClick}
+                  show={this.state.currentUser.id}
+                  toggle={!this.state.toggleLogin}
+                  onChange={this.handleRegisterFormChange}
+                  onSubmit={this.handleEditUser}
+                  name={this.state.editFormData.name}
+                  username={this.state.editFormData.username}
+                  email={this.state.editFormData.email}
+                  password={this.state.registerFormData.password}
+                  submitButtonText="Submit"
+                  backButtonText="Back to Profile"
+                  passwordAsk={false}
+                  toggleLocal={this.state.handleToggleLocalRegister}
+                />
+              )}
+            />
+     <Route
+        exact
+        path="/countries/:id/comments/new"
+        render={() => (
+          <CommentForm
+              commentData={this.state.commentData}
+              onChange={this.handleFormChange}
+              onSubmit={this.handleSubmit}
+          />
+          )}
+      />
       <Route
           exact
           path="/logout"

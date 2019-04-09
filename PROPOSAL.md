@@ -57,7 +57,7 @@ with photos and blog posts
 
 ## Database and Relations
 
-- Users (hasManyCountries, hasManyBlogs, hasManyComments)
+- Users (hasManyCountries)
 - Countries (belongsToUser, hasManyBlogs, hasManyComments)
 - Blogs(belongsToUser, belongsToCountry)
 - Comments (belongsToCountry, belongsToUser)

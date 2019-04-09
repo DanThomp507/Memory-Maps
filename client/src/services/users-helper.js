@@ -1,8 +1,11 @@
-const { api } = require('./api');
+const axios = require('axios');
 
+const api = axios.create({
+  baseURL: 'http://localhost:3000'
+});
 
 export const registerUser = async (resgisterData) => {
-  const resp = await api.post(`/users/`, { "user": resgisterData });
+  const resp = await api.post(`/users/`, { user: resgisterData });
   return resp.data;
 }
 

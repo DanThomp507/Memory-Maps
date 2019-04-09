@@ -9,7 +9,7 @@ const Footer = props => {
         {show && (
           <>
             <Link
-            // to={"/user/" + currentUser.id + "/username/" + currentUser.username}
+            to={"/user/profile"}
             >
             Profile
             </Link>
@@ -17,7 +17,7 @@ const Footer = props => {
             <Link to="/logout">Logout</Link>
           </>
         )}
-        <a href="https://github.com/DanThomp507/Memory-Maps">github</a>
+        <a href="https://github.com/DanThomp507/Memory-Maps">Github</a>
       </div>
     </div>
   );
