@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Link, Route, withRouter } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import { withRouter } from "react-router";
 import './App.css';
+import decode from 'jwt-decode';
 import Home from './components/Home.jsx'
 import Map from './components/Map.jsx';
 import LoginForm from './components/LoginForm.jsx';
@@ -25,7 +27,7 @@ class App extends Component {
       username: "",
       password: "",
       email: "",
-      bio: ""
+      bio: "",
     },
     editFormData: {
       name: "",
@@ -39,7 +41,7 @@ class App extends Component {
       password: ""
     },
     toggleLogin: true,
-    currentUser: {}
+    currentUser: null,
     }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLoginClick = this.handleLoginClick.bind(this);
@@ -51,28 +53,24 @@ class App extends Component {
     this.handleRegister = this.handleRegister.bind(this);
     this.handleRegisterFormChange = this.handleRegisterFormChange.bind(this);
   }
-  async componentDidMount() {
-    try {
-    const {user} = await verifyToken();
-    if (user !== undefined) {
+  componentDidMount() {
+    const checkUser = localStorage.getItem("jwt");
+    if (checkUser) {
+      const user = decode(checkUser);
       this.setState({
         currentUser: user
       })
-    } else {
-      this.props.history.push('/');
     }
-  } catch (e) {
-    this.props.history.push('/');
   }
-}
-  async handleLogin(e) {
-    e.preventDefault();
-    const { user } = await loginUser(this.state.loginFormData);
-    this.setState({
-      currentUser: user
-    });
-    this.props.history.push('/home');
-  }
+
+  async handleLogin() {
+      const token = await loginUser(this.state.loginFormData);
+      const userData = decode(token.jwt)
+      this.setState({
+        currentUser: userData
+      })
+      localStorage.setItem("jwt", token.jwt)
+    }
 
 handleRegisterClick(e) {
   e.preventDefault();
@@ -137,7 +135,7 @@ async handleRegister(e) {
       bio: ""
     },
   }));
-  this.props.history.push(`/user/${this.state.currentUser.id}/username/${this.state.currentUser.username}`);
+  this.props.history.push(`/home`);
 }
 
 async handleEditUser(e) {
@@ -153,9 +151,9 @@ async handleEditUser(e) {
 }
 
 handleLogout() {
-  localStorage.removeItem("authToken");
+  localStorage.removeItem("jwt");
   this.setState({
-    currentUser: {},
+    currentUser: null,
     toggleLogin: true,
   });
   this.props.history.push(`/`);
@@ -174,7 +172,7 @@ handleLogout() {
           <>
             <LoginForm
               {...props}
-              show={this.state.currentUser.id}
+              // show={this.state.currentUser.id}
               toggle={this.state.toggleLogin}
               onChange={this.handleLoginFormChange}
               onSubmit={this.handleLogin}
@@ -187,7 +185,7 @@ handleLogout() {
             {...props}
             title={"Register User"}
             onClick={this.handleLoginClick}
-            show={this.state.currentUser.id}
+            // show={this.state.currentUser.id}
             toggle={this.state.toggleLogin}
             onChange={this.handleRegisterFormChange}
             onSubmit={this.handleRegister}

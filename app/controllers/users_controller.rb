@@ -1,61 +1,52 @@
 class UsersController < ApplicationController
-  skip_before_action :ensure_signed_in, only: [:create, :login]
+  before_action :set_user, only: [:show, :update, :destroy]
 
- def gen_token(user_id)
-   payload = {id: user_id}
-   JWT.encode(payload, Rails.application.secrets.secret_key_base)
- end
-
+  # GET /users
   def index
     @users = User.all
+
     render json: @users
   end
 
+  # GET /users/1
+  def show
+    render json: @user
+  end
+
+  # POST /users
   def create
-   name = params[:name]
-   username = params[:username]
-   password = params[:password]
-   email = params[:email]
-   bio = params[:bio]
+    @user = User.new(user_params)
 
-   new_user = User.new({
-     name: name,
-     username: username,
-     password: password,
-     email: email,
-     bio: bio
-   })
+    if @user.save
+      render json: @user, status: :created, location: @user
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
 
+  # PATCH/PUT /users/1
+  def update
+    if @user.update(user_params)
+      render json: @user
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
 
-   if new_user.valid?
-     new_user.save!
-     user_data = {
-       name: user.name,
-       username: user.username,
-       password: user.password,
-       bio: user.bio,
-       email: user.email
-     }
-     render json: { user: user_data, token: gen_token(new_user.id)}
-   else
-     render nothing: true, status: 401
-   end
- end
+  # DELETE /users/1
+  def destroy
+    @user.destroy
+  end
 
- def login
-   email = params[:email]
-   password = params[:password]
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
+    end
 
-   user = User.find_from_credentials email, password
-   if user.nil?
-     render nothing: true, status: 401
-   else
-     render json: {user: user, token: gen_token(user.id)}
-   end
- end
-
- def verify
-   ensure_signed_in
-   render json: { user: current_user }
- end
+    # Only allow a trusted parameter "white list" through.
+    def user_params
+      params.require(:user).permit(
+        :email, :password, :name, :username, :bio)
+    end
 end
