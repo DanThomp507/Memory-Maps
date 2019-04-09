@@ -5,10 +5,14 @@ const api = axios.create({
 });
 
 const createNewComment = async (id, comment) => {
-  const respData = await api.post(`/stations/${id}/comments/new`, comment);
+  const respData = await api.post(`/countries/${id}/comments/new`, comment);
   return respData;
 };
-
+const fetchCountries = async () => {
+  const respData = await api.get(`/countries`);
+  return respData;
+};
 export {
-  createNewComment
+  createNewComment,
+  fetchCountries
 }

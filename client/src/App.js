@@ -18,7 +18,8 @@ import {
   loginUser
 } from "./services/users-helper.js";
 import {
-  createNewComment
+  createNewComment,
+  fetchCountries,
 } from "./services/countries-helper.js"
 
 class App extends Component {
@@ -57,7 +58,8 @@ class App extends Component {
     this.handleRegister = this.handleRegister.bind(this);
     this.handleRegisterFormChange = this.handleRegisterFormChange.bind(this);
   }
-  componentDidMount() {
+  async componentDidMount() {
+    await this.getCountries();
     const checkUser = localStorage.getItem("jwt");
     if (checkUser) {
       const user = decode(checkUser);
@@ -166,6 +168,13 @@ handleLogout() {
     toggleLogin: true,
   });
   this.props.history.push(`/`);
+}
+async getCountries() {
+const countryData = await fetchCountries();
+console.log(countryData);
+this.setState({
+  countryData: countryData.data,
+  });
 }
 
   render() {
