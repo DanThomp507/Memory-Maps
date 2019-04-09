@@ -6,8 +6,11 @@ const UserProfile = props => {
   return (
     <div className="user-container">
       <div className='title-container'>
-        <h2>{props.currentUser.username}</h2>
+        <h1>User Profile</h1>
+        <p>Username: {props.currentUser.username}</p>
         <p>Email: {props.currentUser.email}</p>
+        <p>Name: {props.currentUser.name}</p>
+        <p>Bio: {props.currentUser.bio}</p>
       </div>
       <div className="eventsList-container">
         <nav className='sidebar-nav'>

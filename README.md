@@ -27,6 +27,7 @@ the places they've been and access them at a later date.
 - PostgreSQL
 - Google Maps React
 - AWS (for images if it's feasible)
+- Gem Bundle Insert 
 
 ## MVP
   - Creating a user profile

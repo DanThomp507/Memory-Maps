@@ -64,11 +64,17 @@ class App extends Component {
     if (checkUser) {
       const user = decode(checkUser);
       this.setState({
-        currentUser: user
+        currentUser: user,
+        editFormData: {
+          name: user.name,
+          username: user.username,
+          password: user.password,
+          email: user.email,
+          bio: user.bio,
+      }
       })
     }
   }
-
   async handleLogin(e) {
     e.preventDefault();
     const token = await loginUser(this.state.loginFormData);
@@ -157,9 +163,9 @@ async handleEditUser(e) {
   this.setState((prevState, newState) => ({
     currentUser: currentUser.newUser,
   }));
-
-  this.props.history.push(`/user/edit`);
+  this.props.history.push(`/user/edit/`);
 }
+
 
 handleLogout() {
   localStorage.removeItem("jwt");
@@ -207,8 +213,8 @@ this.setState({
             toggle={this.state.toggleLogin}
             onChange={this.handleRegisterFormChange}
             onSubmit={this.handleRegister}
-            first_name={this.state.registerFormData.first_name}
-            last_name={this.state.registerFormData.last_name}
+            name={this.state.registerFormData.name}
+            bio={this.state.registerFormData.bio}
             username={this.state.registerFormData.username}
             email={this.state.registerFormData.email}
             password={this.state.registerFormData.password}
@@ -226,11 +232,7 @@ this.setState({
         render={props => (
             <UserProfile
               {...props}
-              showList={this.state.showList}
-              changeList={this.changeList}
               currentUser={this.state.currentUser}
-              eventsList={this.state.eventsList}
-              hostingEventsList={this.state.hostingEventsList}
             />
         )}
       />
@@ -243,6 +245,7 @@ this.setState({
             className="home"
             show={this.state.currentUser}
             userData={this.state.userData}
+            countryData={this.state.countryData}
             history={this.props.history}
           />
         )}
@@ -255,7 +258,7 @@ this.setState({
                   {...props}
                   title={"Edit User"}
                   onClick={this.handleLoginClick}
-                  show={this.state.currentUser.id}
+                  show={this.state.currentUser}
                   toggle={!this.state.toggleLogin}
                   onChange={this.handleRegisterFormChange}
                   onSubmit={this.handleEditUser}

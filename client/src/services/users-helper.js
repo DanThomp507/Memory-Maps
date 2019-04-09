@@ -1,8 +1,4 @@
-const axios = require('axios');
-
-const api = axios.create({
-  baseURL: 'http://localhost:3000'
-});
+const { api, updateToken } = require('./api');
 
 export const registerUser = async (resgisterData) => {
   const resp = await api.post(`/users/`, { user: resgisterData });

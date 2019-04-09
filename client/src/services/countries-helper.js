@@ -10,7 +10,7 @@ const createNewComment = async (id, comment) => {
 };
 const fetchCountries = async () => {
   const respData = await api.get(`/countries`);
-  return respData;
+  return respData.data;
 };
 export {
   createNewComment,

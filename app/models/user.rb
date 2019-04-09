@@ -11,6 +11,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       email: email,
+      bio: bio
     }
   end
 end
