@@ -16,6 +16,7 @@ class CommentForm extends Component {
     };
     this.handleCommentFormChange = this.handleCommentFormChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleRadio = this.handleRadio.bind(this);
 }
 
 handleCommentFormChange(e) {
@@ -29,7 +30,7 @@ handleCommentFormChange(e) {
 }
 async handleSubmit(e){
   e.preventDefault();
-  const resp = await createNewComment(this.props.match.params.id, this.state.commentData);
+  const resp = await createNewComment(this.state.commentData);
   console.log(resp);
   this.setState(prevState => ({
     commentData: {
@@ -46,6 +47,18 @@ async componentDidMount() {
     }
   }));
 }
+handleRadio(e) {
+     const would_revisit = e.target.value === 'true'
+       ? true
+       : false;
+     console.log(would_revisit);
+     this.setState(prevState => ({
+       commentData: {
+         ...prevState.commentData,
+         would_revisit,
+       }
+     }));
+   }
   render() {
     return (
       <form className="comment-form" onSubmit={this.handleSubmit}>
@@ -77,15 +90,17 @@ async componentDidMount() {
           className="fave_site"
           onChange={this.handleCommentFormChange}
         />
-        <label htmlFor="would_revisit">Would you revisit?</label>
-        <input
-          type="text"
-          name="would_revisit"
-          value={this.props.would_revisit}
-          id="would_revisit"
-          className="would_revisit"
-          onChange={this.handleCommentFormChange}
-        />
+        <label htmlFor="would_revisit"> Would you revisit?</label>
+	      <input type="radio"
+               name="would_revisit"
+               onChange={this.handleRadio}
+               value="true"/>
+	      Yes
+	      <input type="radio"
+               name="would_revisit"
+               onChange={this.handleRadio}
+               value="false"/>
+	      No
         <label htmlFor="biggest_surprise">What was the biggest surprise?</label>
         <input
           type="text"

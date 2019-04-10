@@ -10,19 +10,6 @@ class Home extends Component {
   return (
     <div>
     {
-
-      // <Route
-      //   exact
-      //   path="/home"
-      //   render={props => (
-      //     <Home
-      //       {...props}
-      //       className="home"
-      //       show={this.state.currentUser}
-      //       userData={this.state.userData}
-      //       countryData={this.state.countryData}
-      //
-      //     />
       <Route
       path="/home"
       render={props => (

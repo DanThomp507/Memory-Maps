@@ -9,7 +9,6 @@ export class CountryMap extends Component {
       selectedCountry: {}
     }
      this.onMarkerClick = this.onMarkerClick.bind(this);
-     // this.handleRedirect = this.handleRedirect.bind(this);
   }
 
   onMarkerClick(props){
@@ -17,7 +16,6 @@ export class CountryMap extends Component {
     this.setState({
       selectedCountry: props
     })
-    // console.log(this.props);
   this.props.history.push(`/countries/${this.state.selectedCountry.id}/`);
 }
 

@@ -261,7 +261,7 @@ this.setState({
             show={this.state.currentUser}
             userData={this.state.userData}
             countryData={this.state.countryData}
-          
+
           />
         )}
       />
@@ -291,12 +291,12 @@ this.setState({
             />
      <Route
         exact
-        path="/users/:user_id/countries/:country_id/comments"
+        path="/countries/:id/comments/new"
         render={() => (
           <CommentForm
-              commentData={this.state.commentData}
-              onChange={this.handleFormChange}
-              onSubmit={this.handleSubmit}
+            commentData={this.state.commentData}
+            onChange={this.handleFormChange}
+            onSubmit={this.handleSubmit}
           />
           )}
       />
