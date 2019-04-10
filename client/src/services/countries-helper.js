@@ -12,7 +12,12 @@ const fetchCountries = async () => {
   const respData = await api.get(`/countries`);
   return respData.data;
 };
+const createNewBlogPost = async (user_id, country_id, blog) => {
+const respData = await api.post(`/users/${user_id}/countries/${country_id}/blogs`, blog);
+return respData;
+}
 export {
   createNewComment,
-  fetchCountries
+  fetchCountries,
+  createNewBlogPost
 }

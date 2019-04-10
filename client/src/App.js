@@ -20,6 +20,7 @@ import {
 import {
   createNewComment,
   fetchCountries,
+  createNewBlogPost,
 } from "./services/countries-helper.js"
 
 class App extends Component {
@@ -44,6 +45,8 @@ class App extends Component {
       email: "",
       password: ""
     },
+    commentData: {},
+    blogData: {},
     countryData: [],
     toggleLogin: true,
     currentUser: {},
