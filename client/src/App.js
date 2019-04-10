@@ -191,8 +191,8 @@ this.setState({
       <div className="App">
       <header>
       <h1 className="main-title">
-            <Link to="/home">Memory Maps</Link>
-          </h1>
+        <Link to="/home">Memory Maps</Link>
+      </h1>
       </header>
           <Route
         exact
@@ -278,7 +278,7 @@ this.setState({
             />
      <Route
         exact
-        path="/countries/:id/comments/new"
+        path="/users/:user_id/countries/:country_id/comments"
         render={() => (
           <CommentForm
               commentData={this.state.commentData}

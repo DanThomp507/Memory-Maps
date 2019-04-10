@@ -10,10 +10,10 @@ const createNewComment = async (id, comment) => {
 };
 const fetchCountries = async () => {
   const respData = await api.get(`/countries`);
-  return respData.data;
+  return respData;
 };
 const createNewBlogPost = async (user_id, country_id, blog) => {
-const respData = await api.post(`/users/${user_id}/countries/${country_id}/blogs`, blog);
+const respData = await api.post(`/users/${user_id}/countries/${country_id}/blogs/`, blog);
 return respData;
 }
 export {

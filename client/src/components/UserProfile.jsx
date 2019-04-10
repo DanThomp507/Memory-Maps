@@ -7,13 +7,10 @@ const UserProfile = props => {
     <div className="user-container">
       <div className='title-container'>
         <h1>User Profile</h1>
-        <p>Username: {props.currentUser.username}</p>
         <p>Email: {props.currentUser.email}</p>
         <p>Name: {props.currentUser.name}</p>
         <p>Bio: {props.currentUser.bio}</p>
       </div>
-      <div className="eventsList-container">
-        <nav className='sidebar-nav'>
               <button
                 className="edit-button"
                 id='edit-user'
@@ -23,9 +20,7 @@ const UserProfile = props => {
                     )
                   }>Edit User
               </button>
-        </nav>
-    </div>
-  </div>
+        </div>
   );
 }
 export default withRouter(UserProfile);
