@@ -3,7 +3,7 @@ import React from "react";
 
 export default props => (
   <div className="contact-container">
-    <h2 className="contact-header">Contact Me</h2>
+    <h2 className="contact-header">Contact</h2>
     <form className="contact-form"
           id="contactform"
           action="//formspree.io/danthomp507@gmail.com"

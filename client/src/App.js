@@ -8,6 +8,7 @@ import Map from './components/Map.jsx';
 import LoginForm from './components/LoginForm.jsx';
 import UserForm from './components/UserForm.jsx';
 import Contact from './components/Contact.jsx';
+import CountryPage from './components/CountryPage.jsx'
 import CommentForm from './components/CommentForm.jsx';
 import Footer from './components/Footer.jsx';
 import LogOutForm from './components/LogOutForm.jsx';
@@ -15,12 +16,14 @@ import UserProfile from './components/UserProfile.jsx';
 import {
   registerUser,
   editUser,
-  loginUser
+  loginUser,
+  deleteUser,
 } from "./services/users-helper.js";
 import {
   createNewComment,
   fetchCountries,
   createNewBlogPost,
+  fetchCountry,
 } from "./services/countries-helper.js"
 
 class App extends Component {
@@ -48,6 +51,7 @@ class App extends Component {
     commentData: {},
     blogData: {},
     countryData: [],
+    currentCountry: {},
     toggleLogin: true,
     currentUser: {},
     }
@@ -60,6 +64,7 @@ class App extends Component {
     this.handleEditUser = this.handleEditUser.bind(this);
     this.handleRegister = this.handleRegister.bind(this);
     this.handleRegisterFormChange = this.handleRegisterFormChange.bind(this);
+    this.destroyUser = this.destroyUser.bind(this);
   }
   async componentDidMount() {
     await this.getCountries();
@@ -178,6 +183,12 @@ handleLogout() {
   });
   this.props.history.push(`/`);
 }
+async destroyUser(id) {
+    const deleteUser = await deleteUser(id);
+    this.setState(prevState => ({
+      userData: prevState.userData.filter(user => user.id !== id)
+    }));
+  }
 async getCountries() {
 const countryData = await fetchCountries();
 console.log(countryData);
@@ -236,6 +247,7 @@ this.setState({
             <UserProfile
               {...props}
               currentUser={this.state.currentUser}
+              deleteUserProfile={this.deleteUserProfile}
             />
         )}
       />
@@ -249,7 +261,7 @@ this.setState({
             show={this.state.currentUser}
             userData={this.state.userData}
             countryData={this.state.countryData}
-            history={this.props.history}
+          
           />
         )}
       />
@@ -272,6 +284,7 @@ this.setState({
                   submitButtonText="Submit"
                   backButtonText="Back to Profile"
                   passwordAsk={false}
+                  destroyUser={this.destroyUser}
                   toggleLocal={this.state.handleToggleLocalRegister}
                 />
               )}
@@ -286,6 +299,18 @@ this.setState({
               onSubmit={this.handleSubmit}
           />
           )}
+      />
+      <Route
+        exact
+        path="/countries/:id/"
+        render={props => (
+            <CountryPage
+              {...props}
+              countryData={this.state.countryData}
+              // commentData={this.state.commentData}
+              // blogData={this.state.blogData}
+            />
+        )}
       />
       <Route
           exact

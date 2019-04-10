@@ -39,3 +39,9 @@ export const editUser = async (id, edits) => {
   console.log("this is edit user: resp", respData);
   return respData.data;
 };
+
+export const deleteUser = async (id) => {
+  console.log(id);
+  const resp = await api.delete(`/users/${id}/`);
+  return resp.data;
+};

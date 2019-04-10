@@ -1,18 +1,37 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Map from './Map';
 
 class Home extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
   }
   render(){
   return (
     <div>
     {
-    <Map
-    countryData={this.props.countryData}
-    />
+
+      // <Route
+      //   exact
+      //   path="/home"
+      //   render={props => (
+      //     <Home
+      //       {...props}
+      //       className="home"
+      //       show={this.state.currentUser}
+      //       userData={this.state.userData}
+      //       countryData={this.state.countryData}
+      //
+      //     />
+      <Route
+      path="/home"
+      render={props => (
+        <Map
+        {...props}
+          countryData={this.props.countryData}
+        />
+      )}
+      />
   }
     </div>
     )

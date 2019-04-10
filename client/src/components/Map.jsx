@@ -6,17 +6,46 @@ export class CountryMap extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedPlace: {},
+      selectedCountry: {}
     }
      this.onMarkerClick = this.onMarkerClick.bind(this);
+     // this.handleRedirect = this.handleRedirect.bind(this);
   }
 
-onMarkerClick = (props) => {
-  this.setState({
-    selectedPlace: props,
-  })
-  // this.props.history.push(`/countries/${this.state.selectedPlace.id}`)
-};
+  onMarkerClick(props){
+    console.log(props);
+    this.setState({
+      selectedCountry: props
+    })
+    // console.log(this.props);
+  this.props.history.push(`/countries/${this.state.selectedCountry.id}/`);
+}
+
+ //    return(
+ //      <Link to="/countries/:id/">word</Link>
+ //    <Route
+ //    path={`/countries/${this.state.selectedCountry.id}/`}
+ //    render={(props)=> (
+ //        <CountryPage
+ //          countryData={this.props.countryData}
+ //          selectedCountry={this.props.selectedCountry}
+ //        />
+ //    )}
+ //    />
+ //  )
+ // }
+// handleRedirect(){
+//   // console.log('hello', this.state.selectedCountry);
+//   return(
+//     <>
+//   <Link to="/countries/:id"></Link>
+//   <Route
+//     path={`/countries/${this.state.activeMarker.id}/`}
+//     render={CountryPage}
+//   />
+//   </>
+// )
+// }
 
   render() {
       return (
@@ -267,11 +296,18 @@ onMarkerClick = (props) => {
           onClick={this.onMarkerClick}
           key={i}
           icon={{
-                fillOpacity: 0.3,
                 url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
               }} />
   ))}
-
+          <Marker
+            onClick={this.onMarkerClick}
+            name={'current country'}
+            position={{ lat: this.state.selectedCountry.latitude, lng: this.state.selectedCountry.longitude }}
+            icon={{
+            path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+            fillColor: 'red',
+            fillOpacity: 1
+          }} />
         </Map>
       );
     }
