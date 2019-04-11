@@ -26,10 +26,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
     @country = Country.find(params[:country_id])
+    @comment = Comment.find(params[:id])
     @comment.destroy
-      redirect_to country_comment_path(@country)
   end
 
   private

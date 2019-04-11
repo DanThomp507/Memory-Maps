@@ -26,10 +26,9 @@ class BlogsController < ApplicationController
  end
 
  def destroy
- @country = Country.find(params[:country_id])
- @blog = Blog.find(params[:id])
- @blog.destroy
- render json: @blog, include: :country, status: :ok
+   @country = Country.find(params[:country_id])
+   @blog = Blog.find(params[:id])
+   @blog.destroy
  end
 
  private

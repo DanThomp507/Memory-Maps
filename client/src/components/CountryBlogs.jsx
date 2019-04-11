@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { deleteCountryBlog } from '../services/countries-helper.js';
 
 const CountryBlogs = props => {
  const { countryBlogs } = props;
@@ -12,12 +13,12 @@ return (
           <div className="blog-information">
             <p className="blog-page-title">{blog.title}</p>
             <p>{blog.body}</p>
-              <button
-            className="delete-comment-button"
-            onClick={() => this.deleteBlog()}
-          >
-          Delete Blog
-          </button>
+            <button
+          className="delete-comment-button"
+          onClick={() => props.destroyBlog(props.countryData.id, blog.id)}
+        >
+        Delete Blog
+        </button>
                 </div>
             </div>
           ))}

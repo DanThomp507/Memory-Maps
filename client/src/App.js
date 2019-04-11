@@ -27,6 +27,8 @@ import {
   fetchCountries,
   createNewBlogPost,
   fetchCountry,
+  deleteCountryComment,
+  deleteCountryBlog,
 } from "./services/countries-helper.js"
 
 class App extends Component {
@@ -65,7 +67,6 @@ class App extends Component {
     this.handleEditUser = this.handleEditUser.bind(this);
     this.handleRegister = this.handleRegister.bind(this);
     this.handleRegisterFormChange = this.handleRegisterFormChange.bind(this);
-    this.destroyUser = this.destroyUser.bind(this);
   }
   async componentDidMount() {
     await this.getCountries();
@@ -184,13 +185,6 @@ handleLogout() {
   this.props.history.push(`/`);
 }
 
-async destroyUser(id) {
-    const deleteUser = await deleteUser(id);
-    this.setState(prevState => ({
-      userData: prevState.userData.filter(user => user.id !== id)
-    }));
-  }
-
 async getCountries() {
 const countryData = await fetchCountries();
 console.log(countryData);
@@ -286,7 +280,6 @@ this.setState({
                   submitButtonText="Submit"
                   backButtonText="Back to Profile"
                   passwordAsk={false}
-                  destroyUser={this.destroyUser}
                   toggleLocal={this.state.handleToggleLocalRegister}
                 />
               )}

@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import { Route, Link, withRouter } from "react-router-dom";
 import CountryComments from './CountryComments';
 import CountryBlogs from './CountryBlogs';
-import { fetchCountry, fetchCountryComments, fetchCountryBlogs } from '../services/countries-helper.js';
+import { fetchCountry,
+       fetchCountryComments,
+       fetchCountryBlogs,
+       deleteCountryBlog,
+       deleteCountryComment,
+     } from '../services/countries-helper.js';
 
 class CountryPage extends Component {
   constructor(props){
@@ -12,10 +17,14 @@ class CountryPage extends Component {
       has_data: false,
     }
     this.getCountryData = this.getCountryData.bind(this);
+    this.destroyComment = this.destroyComment.bind(this);
+    this.destroyBlog = this.destroyBlog.bind(this);
   }
+
   async componentDidMount() {
   await this.getCountryData();
 }
+
 async getCountryData() {
     const countryData = await fetchCountry(this.props.match.params.id);
     console.log(countryData);
@@ -32,8 +41,15 @@ async getCountryData() {
       });
     }
   }
+  async destroyComment(country_id, comment_id) {
+      const deleteComment = await deleteCountryComment(country_id, comment_id);
+    }
+    async destroyBlog(country_id, blog_id) {
+        const deleteBlog = await deleteCountryBlog(country_id, blog_id);
+      }
+    
+
   render(){
-    console.log(this.state.countryData.name)
     return (
       <div className="country-profile-header">
       <h2>{this.state.countryData.name}</h2>
@@ -62,13 +78,17 @@ async getCountryData() {
                   <div className="country-comments-page-container">
                   <h1>Comments</h1>
                   <CountryComments
+                  destroyComment={this.destroyComment}
+                  countryData={this.state.countryData}
                   countryComments={this.state.countryData.comments}
                   />
                   </div>
                   <div className="country-blogs-page-container">
                     <h1>Blog Posts </h1>
                   <CountryBlogs
+                  destroyBlog={this.destroyBlog}
                   countryBlogs={this.state.countryData.blogs}
+                  countryData={this.state.countryData}
                   />
                   </div>
               </div>

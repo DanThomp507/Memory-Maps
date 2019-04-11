@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { deleteCountryComment } from '../services/countries-helper.js';
 
 const CountryComments = props => {
  const { countryComments } = props;
@@ -13,11 +14,11 @@ return (
             <p>Favorite Food: {comment.fave_food}</p>
             <p>Favorite City: {comment.fave_city}</p>
             <p>Favorite Site: {comment.fave_site}</p>
-            <p>Would you revisit? : {comment.would_revisit}</p>
+            <p>Would you revisit? {comment.would_revisit}</p>
             <p>What was the biggest surprise you encountered?: {comment.biggest_surprise}</p>
             <button
           className="delete-comment-button"
-          onClick={() => this.deleteComment()}
+          onClick={() => props.destroyComment(props.countryData.id, comment.id)}
         >
         Delete Comment
         </button>
