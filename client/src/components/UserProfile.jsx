@@ -20,7 +20,6 @@ const UserProfile = props => {
                     )
                   }>Edit User
               </button>
-            <button onClick={() => { this.props.deleteUser(this.state.currentUser.id) }}>Delete User</button>
         </div>
   );
 }

@@ -175,7 +175,6 @@ async handleEditUser(e) {
   this.props.history.push(`/user/edit/`);
 }
 
-
 handleLogout() {
   localStorage.removeItem("jwt");
   this.setState({
@@ -184,12 +183,14 @@ handleLogout() {
   });
   this.props.history.push(`/`);
 }
+
 async destroyUser(id) {
     const deleteUser = await deleteUser(id);
     this.setState(prevState => ({
       userData: prevState.userData.filter(user => user.id !== id)
     }));
   }
+
 async getCountries() {
 const countryData = await fetchCountries();
 console.log(countryData);

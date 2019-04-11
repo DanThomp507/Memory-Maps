@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link, withRouter } from "react-router-dom";
-import CountryComments from './CountryComments';
-import { fetchCountry } from '../services/countries-helper.js';
+// import CountryComments from './CountryComments';
+import { fetchCountry, fetchCountryComments, fetchCountryBlogs } from '../services/countries-helper.js';
 
 class CountryPage extends Component {
   constructor(props){
@@ -9,6 +9,7 @@ class CountryPage extends Component {
     this.state = {
       countryData: "",
       countryComments: "",
+      countryBlogs: "",
       has_data: false,
     }
     this.getCountryData = this.getCountryData.bind(this);
@@ -19,19 +20,24 @@ class CountryPage extends Component {
 async getCountryData() {
     const countryData = await fetchCountry(this.props.match.params.id);
     console.log(countryData);
-    console.log(countryData);
-    // const countryComments = await fetchCountryComments(
-    //   this.props.match.params.id
-    // );
+    const countryComments = await fetchCountryComments(
+      this.props.match.params.id
+    );
+    console.log(countryComments);
+    const countryBlogs = await fetchCountryBlogs(
+      this.props.match.params.id
+    );
+    console.log(countryBlogs);
     this.setState((prevState, newState) => ({
       countryData: countryData,
-      // countryComments: countryComments,
+      countryComments: countryComments,
+      countryBlogs: countryBlogs,
       has_data: true
     }));
   }
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
-      this.fetchCountries();
+      this.getCountryData();
       this.setState({
         has_data: true
       });
@@ -42,6 +48,7 @@ async getCountryData() {
     return (
       <div>
       <h2>{this.state.countryData.name}</h2>
+      <div className="country-container">
       <button
               className="comment-button"
               onClick={() =>
@@ -60,8 +67,9 @@ async getCountryData() {
                       )
                     }
                   >
-                    Blog
+                    Write a Blog
                   </button>
+                  </div>
       </div>
     )
   }

@@ -6,7 +6,7 @@ const CountryComments = props => {
   console.log("commentList: props.commentList", commentData);
   return (
     <div className="country-comment-list">
-      {commentData.map((comment, index) => (
+      {this.commentData.map((comment, index) => (
         <div className="comment-container">
           <div className="comment-information">
             <p>Favorite Food: {comment.fave_food}</p>

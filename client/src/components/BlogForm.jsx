@@ -46,23 +46,23 @@ async componentDidMount() {
   render() {
     return (
       <form className="blog-form" onSubmit={this.handleSubmit}>
-        <h2>Write your thoughts</h2>
-        <label htmlFor="title">Title</label>
+        <h2 className="blog-header">Write your thoughts</h2>
         <input
           type="text"
           name="title"
           value={this.props.title}
           id="title"
-          className="title"
+          className="blog-title"
           placeholder="Title"
           onChange={this.handleBlogFormChange}
         />
         <textarea
           type="text"
           name="body"
+          placeholder="Blog Body"
           value={this.props.body}
           id="body"
-          className="body"
+          className="blog-body"
           onChange={this.handleBlogFormChange}
         />
         <button type="submit" onClick={this.handleSubmit}>
