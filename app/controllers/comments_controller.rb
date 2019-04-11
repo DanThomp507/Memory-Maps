@@ -8,14 +8,21 @@ class CommentsController < ApplicationController
   def show
     @country = Country.find(params[:country_id])
     @comment = Comment.find(params[:id])
+    render json: @comments, include: :country, status: :ok
+  end
+
+  def new
+    @country= Country.find(params[:country_id])
+    @comment = Comment.new
+    render json: @comment, include: :country, status: :ok
   end
 
   def create
     @country = Country.find(params[:country_id])
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to country_comment_path(@country, @comment)
-    end
+    render json: @comment, include: :country, status: :ok
+   end
   end
 
   def destroy

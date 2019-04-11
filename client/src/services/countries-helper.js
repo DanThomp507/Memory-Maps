@@ -6,6 +6,7 @@ const api = axios.create({
 
 const createNewComment = async (country_id, comment) => {
   const respData = await api.post(`/countries/${country_id}/comments/`, comment);
+  console.log('this is createnewcomment', respData);
   return respData;
 };
 const fetchCountries = async () => {
@@ -18,6 +19,7 @@ const fetchCountry = async (country) => {
 };
 const createNewBlogPost = async (country_id, blog) => {
 const respData = await api.post(`/countries/${country_id}/blogs/`, blog);
+console.log('this is createNewBlogPost',respData);
 return respData;
 }
 const fetchCountryComments = async country => {

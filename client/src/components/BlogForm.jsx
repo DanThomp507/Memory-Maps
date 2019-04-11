@@ -9,6 +9,7 @@ class BlogForm extends Component {
       blogData: {
         title: '',
         body: '',
+        country_id: '',
       }
     };
     this.handleBlogFormChange = this.handleBlogFormChange.bind(this);
@@ -26,20 +27,20 @@ handleBlogFormChange(e) {
 }
 async handleSubmit(e){
   e.preventDefault();
-  const resp = await createNewBlogPost(this.props.match.params.id, this.state.blogData);
-  console.log(resp);
+  const resp = await createNewBlogPost(this.props.match.params.country_id, this.state.blogData);
   this.setState(prevState => ({
     blogData: {
       ...prevState.blogData
-    }
-  }))
+    }}))
+  console.log('this is from handleSubmit in blogform', this.state.blogData)
+  this.props.history.push(`/countries/${this.props.match.params.country_id}/`)
 }
 
 async componentDidMount() {
   this.setState(prevState => ({
     blogData: {
       ...prevState.blogData,
-      countryId: this.props.match.params.id
+      country_id: this.props.match.params.country_id
     }
   }));
 }
@@ -50,7 +51,7 @@ async componentDidMount() {
         <input
           type="text"
           name="title"
-          value={this.props.title}
+          value={this.state.blogData.title}
           id="title"
           className="blog-title"
           placeholder="Title"
@@ -60,12 +61,12 @@ async componentDidMount() {
           type="text"
           name="body"
           placeholder="Blog Body"
-          value={this.props.body}
+          value={this.state.blogData.body}
           id="body"
           className="blog-body"
           onChange={this.handleBlogFormChange}
         />
-        <button type="submit" onClick={this.handleSubmit}>
+        <button type="submit">
         Submit
         </button>
       </form>

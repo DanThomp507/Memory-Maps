@@ -12,6 +12,7 @@ class CommentForm extends Component {
         fave_site: '',
         would_revisit: null,
         biggest_surprise: '',
+        country_id: '',
       }
     };
     this.handleCommentFormChange = this.handleCommentFormChange.bind(this);
@@ -30,20 +31,21 @@ handleCommentFormChange(e) {
 }
 async handleSubmit(e){
   e.preventDefault();
-  const resp = await createNewComment(this.state.commentData);
+  const resp = await createNewComment(this.props.match.params.country_id, this.state.commentData);
   console.log(resp);
   this.setState(prevState => ({
     commentData: {
       ...prevState.commentData
     }
   }))
+    this.props.history.push(`/countries/${this.props.match.params.country_id}/`)
 }
 
 async componentDidMount() {
   this.setState(prevState => ({
     commentData: {
       ...prevState.commentData,
-      countryId: this.props.match.params.id
+      country_id: this.props.match.params.country_id
     }
   }));
 }
@@ -62,12 +64,12 @@ handleRadio(e) {
   render() {
     return (
       <form className="comment-form" onSubmit={this.handleSubmit}>
-        <h2>Comment Form</h2>
+        <h2>Country Comments</h2>
         <label htmlFor="fave_food">What was your favorite food?</label>
         <input
           type="text"
           name="fave_food"
-          value={this.props.fave_food}
+          value={this.state.fave_food}
           id="fave_food"
           className="fave_food"
           onChange={this.handleCommentFormChange}
@@ -76,7 +78,7 @@ handleRadio(e) {
         <input
           type="text"
           name="fave_city"
-          value={this.props.fave_city}
+          value={this.state.fave_city}
           id="fave_city"
           className="fave_city"
           onChange={this.handleCommentFormChange}
@@ -85,7 +87,7 @@ handleRadio(e) {
         <input
           type="text"
           name="fave_site"
-          value={this.props.fave_site}
+          value={this.state.fave_site}
           id="fave_site"
           className="fave_site"
           onChange={this.handleCommentFormChange}
@@ -105,7 +107,7 @@ handleRadio(e) {
         <input
           type="text"
           name="biggest_surprise"
-          value={this.props.biggest_surprise}
+          value={this.state.biggest_surprise}
           id="biggest_surprise"
           className="biggest_surprise"
           onChange={this.handleCommentFormChange}

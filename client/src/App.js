@@ -49,8 +49,6 @@ class App extends Component {
       email: "",
       password: ""
     },
-    commentData: {},
-    blogData: {},
     countryData: [],
     currentCountry: {},
     toggleLogin: true,
@@ -294,24 +292,12 @@ this.setState({
      <Route
         exact
         path="/countries/:country_id/comments/new"
-        render={() => (
-          <CommentForm
-            commentData={this.state.commentData}
-            onChange={this.handleFormChange}
-            onSubmit={this.handleSubmit}
-          />
-          )}
+        component={CommentForm}
       />
       <Route
          exact
          path="/countries/:country_id/blogs/new"
-         render={() => (
-           <BlogForm
-             blogData={this.state.blogData}
-             onChange={this.handleFormChange}
-             onSubmit={this.handleSubmit}
-           />
-           )}
+         render={BlogForm}
        />
       <Route
         exact
