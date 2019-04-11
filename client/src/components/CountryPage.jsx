@@ -9,8 +9,6 @@ class CountryPage extends Component {
     super(props);
     this.state = {
       countryData: "",
-      countryComments: "",
-      countryBlogs: "",
       has_data: false,
     }
     this.getCountryData = this.getCountryData.bind(this);
@@ -21,18 +19,8 @@ class CountryPage extends Component {
 async getCountryData() {
     const countryData = await fetchCountry(this.props.match.params.id);
     console.log(countryData);
-    const countryComments = await fetchCountryComments(
-      this.props.match.params.id
-    );
-    console.log(countryComments);
-    const countryBlogs = await fetchCountryBlogs(
-      this.props.match.params.id
-    );
-    console.log(countryBlogs);
     this.setState((prevState, newState) => ({
       countryData: countryData,
-      countryComments: countryComments,
-      countryBlogs: countryBlogs,
       has_data: true
     }));
   }
@@ -74,13 +62,13 @@ async getCountryData() {
                   <div className="country-comments-page-container">
                   <h1>Comments</h1>
                   <CountryComments
-                  countryComments={this.state.countryComments}
+                  countryComments={this.state.countryData.comments}
                   />
                   </div>
                   <div className="country-blogs-page-container">
                     <h1>Blog Posts </h1>
                   <CountryBlogs
-                  countryBlogs={this.state.countryBlogs}
+                  countryBlogs={this.state.countryData.blogs}
                   />
                   </div>
               </div>

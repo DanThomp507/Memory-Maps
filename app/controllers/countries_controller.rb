@@ -7,6 +7,6 @@ class CountriesController < ApplicationController
 
   def show
   @country = Country.find(params[:id])
-  render json: @country
+  render json: @country, :include => [:blogs, :comments]
 end
 end
