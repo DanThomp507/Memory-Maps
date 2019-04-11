@@ -32,6 +32,16 @@ const fetchCountryBlogs = async country => {
   const respData = await api.get(`/countries/${country}/blogs`);
   return respData.data;
 };
+const deleteCountryComment = async (country_id, id) => {
+  console.log(country_id, id);
+  const resp = await api.delete(`/countries/${country_id}/comments/${id}`);
+  return resp.data;
+};
+const deleteCountryBlog = async (country_id, id) => {
+  console.log(country_id, id);
+  const resp = await api.delete(`/countries/${country_id}/blogs/${id}`);
+  return resp.data;
+};
 export {
   createNewComment,
   fetchCountries,
@@ -39,4 +49,6 @@ export {
   fetchCountry,
   fetchCountryComments,
   fetchCountryBlogs,
+  deleteCountryComment,
+  deleteCountryBlog
 }

@@ -33,7 +33,7 @@ async handleSubmit(e){
       ...prevState.blogData
     }}))
   console.log('this is from handleSubmit in blogform', this.state.blogData)
-  this.props.history.push(`/countries/${this.props.match.params.country_id}/`)
+this.props.history.push(`/countries/${this.props.match.params.country_id}/`)
 }
 
 async componentDidMount() {

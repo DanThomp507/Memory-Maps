@@ -9,6 +9,8 @@ import LoginForm from './components/LoginForm.jsx';
 import UserForm from './components/UserForm.jsx';
 import Contact from './components/Contact.jsx';
 import CountryPage from './components/CountryPage.jsx'
+import CountryBlogs from './components/CountryBlogs.jsx'
+import CountryComments from './components/CountryComments.jsx'
 import CommentForm from './components/CommentForm.jsx';
 import BlogForm from './components/BlogForm.jsx';
 import Footer from './components/Footer.jsx';

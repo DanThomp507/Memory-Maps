@@ -47,9 +47,9 @@ async getCountryData() {
   render(){
     console.log(this.state.countryData.name)
     return (
-      <div>
+      <div className="country-profile-header">
       <h2>{this.state.countryData.name}</h2>
-      <div className="country-container">
+      <div className="country-button-container">
       <button
               className="comment-button"
               onClick={() =>
@@ -70,9 +70,15 @@ async getCountryData() {
                   >
                     Write a Blog
                   </button>
+                  </div>
+                  <div className="country-comments-page-container">
+                  <h1>Comments</h1>
                   <CountryComments
                   countryComments={this.state.countryComments}
                   />
+                  </div>
+                  <div className="country-blogs-page-container">
+                    <h1>Blog Posts </h1>
                   <CountryBlogs
                   countryBlogs={this.state.countryBlogs}
                   />

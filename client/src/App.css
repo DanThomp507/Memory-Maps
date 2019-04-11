@@ -111,7 +111,7 @@ button {
 }
 .blog-title {
   text-align: center;
-  font-size: 20px
+  font-size: 20px;
 }
 .blog-header {
   font-size: 26px;
@@ -119,6 +119,51 @@ button {
 .blog-body {
   text-align: center;
   font-size: 20px
+}
+.blog-page-title {
+  font-weight: bold;
+}
+.country-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.comment-information {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  margin: 6px auto;
+  border-radius: 20px;
+  border: 3px green solid;
+}
+.blog-information {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  margin: 6px auto;
+  border-radius: 20px;
+  border: 3px green solid;
+}
+.country-comments-page-container {
+  float: left;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.country-blogs-page-container {
+  float: right;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.blog-comments-container {
+  display: flex;
+  flex-direction: row-reverse;
 }
 .footer {
   position: fixed;

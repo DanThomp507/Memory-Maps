@@ -10,9 +10,15 @@ return (
       countryBlogs.map((blog, index) => (
         <div className="blog-container" key={index}>
           <div className="blog-information">
-            <p>Blog Title: {blog.title}</p>
-            <p>Blog Body: {blog.body}</p>
-              </div>
+            <p className="blog-page-title">{blog.title}</p>
+            <p>{blog.body}</p>
+              <button
+            className="delete-comment-button"
+            onClick={() => this.deleteBlog()}
+          >
+          Delete Blog
+          </button>
+                </div>
             </div>
           ))}
     </div>

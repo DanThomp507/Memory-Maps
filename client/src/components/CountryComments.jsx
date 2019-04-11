@@ -15,6 +15,12 @@ return (
             <p>Favorite Site: {comment.fave_site}</p>
             <p>Would you revisit? : {comment.would_revisit}</p>
             <p>What was the biggest surprise you encountered?: {comment.biggest_surprise}</p>
+            <button
+          className="delete-comment-button"
+          onClick={() => this.deleteComment()}
+        >
+        Delete Comment
+        </button>
               </div>
             </div>
           ))}
