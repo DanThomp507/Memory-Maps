@@ -6,6 +6,7 @@ class CountriesController < ApplicationController
   end
 
   def show
-    render json: @country
-  end
+  @country = Country.find(params[:id])
+  render json: @country
+end
 end

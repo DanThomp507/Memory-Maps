@@ -10,6 +10,7 @@ import UserForm from './components/UserForm.jsx';
 import Contact from './components/Contact.jsx';
 import CountryPage from './components/CountryPage.jsx'
 import CommentForm from './components/CommentForm.jsx';
+import BlogForm from './components/BlogForm.jsx';
 import Footer from './components/Footer.jsx';
 import LogOutForm from './components/LogOutForm.jsx';
 import UserProfile from './components/UserProfile.jsx';
@@ -291,7 +292,7 @@ this.setState({
             />
      <Route
         exact
-        path="/countries/:id/comments/new"
+        path="/countries/:country_id/comments/new"
         render={() => (
           <CommentForm
             commentData={this.state.commentData}
@@ -300,6 +301,17 @@ this.setState({
           />
           )}
       />
+      <Route
+         exact
+         path="/countries/:country_id/blogs/new"
+         render={() => (
+           <BlogForm
+             blogData={this.state.blogData}
+             onChange={this.handleFormChange}
+             onSubmit={this.handleSubmit}
+           />
+           )}
+       />
       <Route
         exact
         path="/countries/:id/"

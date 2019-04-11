@@ -4,11 +4,9 @@ Rails.application.routes.draw do
   post 'user_token' => 'user_token#create'
 
   resources :users do
+  resources :countries
+end
   resources :countries do
   resources :blogs, :comments
-end 
-  end
-  resources :countries, :blogs, :comments
-
-
+end
 end

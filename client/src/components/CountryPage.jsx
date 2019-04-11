@@ -7,16 +7,17 @@ class CountryPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      countryData: {},
+      countryData: "",
       countryComments: "",
       has_data: false,
     }
+    this.getCountryData = this.getCountryData.bind(this);
   }
   async componentDidMount() {
   await this.getCountryData();
 }
 async getCountryData() {
-    const countryData = await fetchCountry(this.props.countryData.id);
+    const countryData = await fetchCountry(this.props.match.params.id);
     console.log(countryData);
     console.log(countryData);
     // const countryComments = await fetchCountryComments(
@@ -37,12 +38,12 @@ async getCountryData() {
     }
   }
   render(){
+    console.log(this.state.countryData.name)
     return (
       <div>
-      <h1>Country Information</h1>
       <h2>{this.state.countryData.name}</h2>
       <button
-              className="station-button"
+              className="comment-button"
               onClick={() =>
                 this.props.history.push(
                   `/countries/${this.props.match.params.id}/comments/new`
@@ -51,6 +52,16 @@ async getCountryData() {
             >
               Comment
             </button>
+            <button
+                    className="blog-button"
+                    onClick={() =>
+                      this.props.history.push(
+                        `/countries/${this.props.match.params.id}/blogs/new`
+                      )
+                    }
+                  >
+                    Blog
+                  </button>
       </div>
     )
   }
