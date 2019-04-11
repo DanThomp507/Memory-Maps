@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link, withRouter } from "react-router-dom";
-// import CountryComments from './CountryComments';
+import CountryComments from './CountryComments';
+import CountryBlogs from './CountryBlogs';
 import { fetchCountry, fetchCountryComments, fetchCountryBlogs } from '../services/countries-helper.js';
 
 class CountryPage extends Component {
@@ -69,8 +70,14 @@ async getCountryData() {
                   >
                     Write a Blog
                   </button>
+                  <CountryComments
+                  countryComments={this.state.countryComments}
+                  />
+                  <CountryBlogs
+                  countryBlogs={this.state.countryBlogs}
+                  />
                   </div>
-      </div>
+              </div>
     )
   }
 }

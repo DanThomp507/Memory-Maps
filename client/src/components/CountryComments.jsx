@@ -2,12 +2,13 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 const CountryComments = props => {
-  const { commentData } = props;
-  console.log("commentList: props.commentList", commentData);
-  return (
-    <div className="country-comment-list">
-      {this.commentData.map((comment, index) => (
-        <div className="comment-container">
+ const { countryComments } = props;
+console.log("countryComments : countryComments:", countryComments);
+return (
+  <div className="country-comments-container">
+    {countryComments &&
+      countryComments.map((comment, index) => (
+        <div className="comment-container" key={index}>
           <div className="comment-information">
             <p>Favorite Food: {comment.fave_food}</p>
             <p>Favorite City: {comment.fave_city}</p>
