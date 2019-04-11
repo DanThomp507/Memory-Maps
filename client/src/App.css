@@ -13,6 +13,25 @@ h2 {
 .main-title {
   text-align: center;
 }
+.user-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.user-container{
+  display: inline-block;
+  justify-content: center;
+  float: center;
+  text-align: center;
+  align-items: center;
+}
 button {
   cursor: pointer;
   background-color: blue;
@@ -37,30 +56,6 @@ button {
   margin: 6px auto;
   border-radius: 20px;
   border: 3px green solid;
-}
-.contact-container {
-  display: block;
-  margin-left: 200px;
-  position: fixed;
-  width: 50vw;
-  bottom: 40vh;
-  margin: auto 25vw;
-  justify-content: center;
-  border-radius: 20px;
-  border: 3px green solid;
-  background-color: blue;
-}
-.contact-form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  margin: 6px auto;
-  border-radius: 20px;
-}
-.contact-header {
-  color: white;
 }
 .country-container {
     margin: 0 50% 0 40%;
@@ -164,6 +159,11 @@ button {
 .blog-comments-container {
   display: flex;
   flex-direction: row-reverse;
+}
+.logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .footer {
   position: fixed;

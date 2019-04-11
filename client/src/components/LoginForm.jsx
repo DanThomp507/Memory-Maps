@@ -6,7 +6,6 @@ export default props => {
   return (
     showLogin && (
       <div className="user-form-container">
-        <h1 className="main-title">Memory Maps</h1>
         <form>
           <h2>Login</h2>
           <div className='email-password'>

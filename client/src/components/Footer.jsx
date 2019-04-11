@@ -13,7 +13,6 @@ const Footer = props => {
             >
             Profile
             </Link>
-            <Link to="/contact">Contact</Link>
             <Link to="/logout">Logout</Link>
           </>
         )}

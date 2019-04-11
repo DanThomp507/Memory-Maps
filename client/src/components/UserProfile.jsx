@@ -11,15 +11,15 @@ const UserProfile = props => {
         <p>Name: {props.currentUser.name}</p>
         <p>Bio: {props.currentUser.bio}</p>
       </div>
-              <button
-                className="edit-button"
-                id='edit-user'
-                onClick={() =>
-                  props.history.push(
-                    `/user/edit`
-                    )
-                  }>Edit User
-              </button>
+      <button
+        className="edit-user-button"
+        id='edit-user'
+        onClick={() =>
+          props.history.push(
+            `/user/edit`
+            )
+          }>Edit User
+      </button>
         </div>
   );
 }

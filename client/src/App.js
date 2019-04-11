@@ -7,7 +7,6 @@ import Home from './components/Home.jsx'
 import Map from './components/Map.jsx';
 import LoginForm from './components/LoginForm.jsx';
 import UserForm from './components/UserForm.jsx';
-import Contact from './components/Contact.jsx';
 import CountryPage from './components/CountryPage.jsx'
 import CountryBlogs from './components/CountryBlogs.jsx'
 import CountryComments from './components/CountryComments.jsx'
@@ -313,7 +312,6 @@ this.setState({
             <LogOutForm {...props} handleLogout={this.handleLogout} />
           )}
         />
-        <Route exact path="/contact" render={() => <Contact />} />
         <Footer
           handleLogout={this.handleLogout}
           show={this.state.currentUser}
