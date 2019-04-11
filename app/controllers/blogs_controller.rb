@@ -1,14 +1,13 @@
 class BlogsController < ApplicationController
 
   def index
-   @country = Country.find(params[:country_id])
-   @blogs = @country.blogs
-   render json: @blogs, include: :country
- end
+    @blogs = Blog.all
+    render json: @blogs
+  end
 
- def show
-    @blog = Blog.find(params[:id])
-   render json: @blog, include: :country
+  def show
+   @country = Country.find(params[:country_id])
+   @blogs = Blog.find(params[:id])
  end
 
  def new
@@ -24,24 +23,11 @@ class BlogsController < ApplicationController
    end
  end
 
- def edit
-  @country = Country.find(params[:country_id])
-   @blog = Blog.find(params[:id])
- end
-
- def update
-   @country = Country.find(params[:country_id])
-   @blog = Blog.find(params[:id])
-   if @blog.update_attributes(blog_params)
-     redirect_to country_blog_path(@country, @blog)
-   end
- end
-
  def destroy
-   @blog = Blog.find(params[:id])
-   @country = Country.find(params[:country_id])
-   @blog.destroy
-   redirect_to country_blogs_path(country)
+ @blog = Blog.find(params[:id])
+ @country = Country.find(params[:country_id])
+ @blog.destroy
+ redirect_to country_blog_path(@country)
  end
 
  private
