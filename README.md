@@ -60,6 +60,7 @@ the places they've been and access them at a later date.
 
 
 ## ERD
+![Entity Relationship Diagram](https://drive.google.com/file/d/1quXn89RNas35xIGH8-IBJpyuxY9imDm8/view?usp=sharing)
 
 ## Database and Relations
 
