@@ -1,6 +1,14 @@
-# Memory-Maps
+# Memory Maps
 
 ## Link to Deployed Project
+
+## Installation Instructions
+* git clone https://github.com/DanThomp507/Memory-Maps.git
+* bundle install in the root directory (rails app)
+* cd into client directory (React front-end)
+* npm i to install all dependencies
+* When in the client directory, npm start to start the server
+* To run the Rails server, go into the root directory and run rails s
 
 ## Description/User Story
 
