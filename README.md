@@ -57,10 +57,11 @@ the places they've been and access them at a later date.
 - Adding user photos to a particular country's profile page  
 
 ## Wireframes
-
+![Wireframe Image 1](https://res.cloudinary.com/djizyydmp/image/upload/v1555074055/Wireframe1.jpg)
+![Wireframe Image 2](https://res.cloudinary.com/djizyydmp/image/upload/v1555074055/Wireframe2.jpg)
 
 ## ERD
-![Entity Relationship Diagram](https://drive.google.com/file/d/1quXn89RNas35xIGH8-IBJpyuxY9imDm8/view?usp=sharing)
+![Entity Relationship Diagram](https://res.cloudinary.com/djizyydmp/image/upload/v1555074055/database_relations.jpg)
 
 ## Database and Relations
 
