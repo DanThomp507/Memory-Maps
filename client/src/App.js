@@ -80,7 +80,7 @@ class App extends Component {
           password: user.password,
           email: user.email,
           bio: user.bio,
-      }
+        }
       })
     }
   }

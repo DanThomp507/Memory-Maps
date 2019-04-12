@@ -41,7 +41,7 @@ the places they've been and access them at a later date.
 - Axios
 - Cors
 - Google Maps React
-- Gem Bundle Insert
+- Rails Bulk Insert Gem 
 
 ## MVP
   - Creating a user account/profile
