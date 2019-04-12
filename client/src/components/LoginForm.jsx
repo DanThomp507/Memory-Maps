@@ -11,7 +11,6 @@ export default props => {
           <div className='email-password'>
             <label htmlFor="email">Email</label>
             <input
-              id='email'
               type="text"
               onChange={onChange}
               name="email"
@@ -22,7 +21,6 @@ export default props => {
           <div className='email-password'>
             <label htmlFor="password">Password</label>
             <input
-              id='password'
               type="password"
               onChange={onChange}
               name="password"
@@ -33,11 +31,10 @@ export default props => {
           <button id='sign-in' className='login-button' type="submit" onClick={onSubmit}>
             Sign In
           </button>
-          <p id='register'> Don't have an account?
+          <p id='register'> Don't have an account?</p>
             <button className='login-button' type="submit" onClick={register}>
               Register Here!
             </button>
-          </p>
         </form>
       </div>
     )

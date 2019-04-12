@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { createNewBlogPost } from "../services/countries-helper";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class BlogForm extends Component {
   constructor(props) {

@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { deleteCountryBlog } from '../services/countries-helper.js';
 
 const CountryBlogs = props => {
  const { countryBlogs } = props;

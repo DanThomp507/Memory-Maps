@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 
 export class CountryMap extends Component {
@@ -18,32 +18,6 @@ export class CountryMap extends Component {
     })
   this.props.history.push(`/countries/${this.state.selectedCountry.id}/`);
 }
-
- //    return(
- //      <Link to="/countries/:id/">word</Link>
- //    <Route
- //    path={`/countries/${this.state.selectedCountry.id}/`}
- //    render={(props)=> (
- //        <CountryPage
- //          countryData={this.props.countryData}
- //          selectedCountry={this.props.selectedCountry}
- //        />
- //    )}
- //    />
- //  )
- // }
-// handleRedirect(){
-//   // console.log('hello', this.state.selectedCountry);
-//   return(
-//     <>
-//   <Link to="/countries/:id"></Link>
-//   <Route
-//     path={`/countries/${this.state.activeMarker.id}/`}
-//     render={CountryPage}
-//   />
-//   </>
-// )
-// }
 
   render() {
       return (

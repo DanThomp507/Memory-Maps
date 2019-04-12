@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = props => {
-  const { show, currentUser } = props;
+  const { show } = props;
   return (
     <div className="footer">
       <div className="footer-text">

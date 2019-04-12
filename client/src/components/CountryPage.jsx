@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Route, Link, withRouter } from "react-router-dom";
 import CountryComments from './CountryComments';
 import CountryBlogs from './CountryBlogs';
 import { fetchCountry,
@@ -47,7 +46,7 @@ async getCountryData() {
     async destroyBlog(country_id, blog_id) {
         const deleteBlog = await deleteCountryBlog(country_id, blog_id);
       }
-    
+
 
   render(){
     return (

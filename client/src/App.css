@@ -18,6 +18,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  border: solid 2px green;
+
 }
 .title-container {
   display: flex;
@@ -25,16 +27,25 @@ h2 {
   justify-content: center;
   text-align: center;
 }
+.user-profile-header {
+  color: white;
+}
 .user-container{
-  display: inline-block;
+  display: flex;
+  width: 30vw;
   justify-content: center;
-  float: center;
-  text-align: center;
-  align-items: center;
+  flex-direction: column;
+  background: green;
+  padding: 5vh 15vh 0 15vh;
+  padding-bottom: 0;
+  margin-top: 1vh;
+  margin-left: 55vh;
+  margin-bottom: 10vh;
+  border-radius: 3%;
 }
 button {
   cursor: pointer;
-  background-color: blue;
+  background-color: navy;
   color: white;
   font-size: 100%;
   height: auto;
@@ -58,13 +69,13 @@ button {
   border: 3px green solid;
 }
 .country-container {
-    margin: 0 50% 0 40%;
-    margin-bottom: 1.5vh;
-    justify-content: center;
+  margin: 0 50% 0 40%;
+  margin-bottom: 1.5vh;
+  justify-content: center;
 }
 .comment-button {
   cursor: pointer;
-  background-color: blue;
+  background-color: navy;
   border: none;
   color: white;
   font-size: 100%;
@@ -80,7 +91,7 @@ button {
 }
 .blog-button {
   cursor: pointer;
-  background-color: blue;
+  background-color: navy;
   border: none;
   color: white;
   font-size: 100%;

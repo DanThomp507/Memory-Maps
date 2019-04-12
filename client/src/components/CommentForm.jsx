@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { createNewComment } from "../services/countries-helper";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class CommentForm extends Component {
   constructor(props) {

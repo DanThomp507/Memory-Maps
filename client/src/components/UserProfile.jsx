@@ -6,7 +6,7 @@ const UserProfile = props => {
   return (
     <div className="user-container">
       <div className='title-container'>
-        <h1>User Profile</h1>
+        <h1 className="user-profile-header">User Profile</h1>
         <p>Email: {props.currentUser.email}</p>
         <p>Name: {props.currentUser.name}</p>
         <p>Bio: {props.currentUser.bio}</p>
