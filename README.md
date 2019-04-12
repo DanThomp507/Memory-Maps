@@ -1,5 +1,7 @@
 # Memory-Maps
 
+## Link to Deployed Project
+
 ## Description/User Story
 
 The world has become increasingly globalized, which means people have the
@@ -25,11 +27,17 @@ the places they've been and access them at a later date.
 - CSS
 - Ruby/Ruby on Rails
 - PostgreSQL
+- JsonWebToken(JWT)
+- Bcrypt
+- Knock
+- Axios
+- Cors
 - Google Maps React
 - Gem Bundle Insert
 
 ## MVP
-  - Creating a user profile
+  - Creating a user account/profile
+  - Logging in a user
   - The ability to edit user profile information
   - Adding mini-blog posts/blurbs to a country's profile page
   - Updating/Deleting blogs and comments on a country's page
@@ -49,7 +57,7 @@ the places they've been and access them at a later date.
 
 - Users (hasManyCountries, hasManyBlogs, hasManyComments)
 - Countries (belongsToUser, hasManyBlogs, hasManyComments)
-- Blogs(belongsToUser, belongsToCountry)
+- Blogs (belongsToUser, belongsToCountry)
 - Comments (belongsToCountry, belongsToUser)
 
 ## Component Hierarchy/Library
@@ -66,3 +74,19 @@ the places they've been and access them at a later date.
 - Comment Form
 - Map
 - Logout Form
+
+## Code Snippet
+```
+handleRadio(e) {
+     const would_revisit = e.target.value === 'true'
+       ? true
+       : false;
+     this.setState(prevState => ({
+       commentData: {
+         ...prevState.commentData,
+         would_revisit,
+       }
+     }));
+   }
+```
+This is a handleRadio function that converts a string into a boolean.
