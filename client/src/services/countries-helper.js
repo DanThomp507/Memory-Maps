@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'https://sleepy-ridge-49878.herokuapp.com'
 });
 
 const createNewComment = async (country_id, comment) => {
