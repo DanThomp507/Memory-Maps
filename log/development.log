@@ -35885,3 +35885,720 @@ Processing by CountriesController#index as HTML
 Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/countries" for ::1 at 2019-04-12 09:34:44 -0400
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 40ms (Views: 20.4ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/countries/36/" for ::1 at 2019-04-12 09:38:44 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 36]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 36]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 75ms (Views: 37.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 09:47:29 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/countries/14/" for ::1 at 2019-04-12 09:47:38 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 14]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 14]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/countries/227/" for ::1 at 2019-04-12 09:53:23 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mCountry Load (1.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 36ms (Views: 16.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for ::1 at 2019-04-12 09:54:21 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 56ms (Views: 22.7ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 09:55:18 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (32.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 63ms (Views: 29.0ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/countries/227/" for ::1 at 2019-04-12 09:55:21 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 09:57:53 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan123@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 93ms (Views: 1.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 09:57:57 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (1.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/countries/227/" for ::1 at 2019-04-12 09:58:01 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 09:58:17 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 09:58:34 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/countries/227/" for ::1 at 2019-04-12 09:58:56 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 09:59:03 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/countries/112/blogs/" for ::1 at 2019-04-12 09:59:40 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"title"=>"Thoughts on Tokyo", "body"=>"I like Shibuya. I like Senso Ji. I like Ginza", "country_id"=>"112", "blog"=>{"title"=>"Thoughts on Tokyo", "body"=>"I like Shibuya. I like Senso Ji. I like Ginza", "country_id"=>"112"}}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:23
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:23
+  [1m[36mBlog Create (7.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "country_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Thoughts on Tokyo"], ["body", "I like Shibuya. I like Senso Ji. I like Ginza"], ["created_at", "2019-04-12 13:59:40.389204"], ["updated_at", "2019-04-12 13:59:40.389204"], ["country_id", 112]]
+  ↳ app/controllers/blogs_controller.rb:23
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:23
+Completed 200 OK in 47ms (Views: 1.0ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 09:59:40 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (1.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/countries/112/comments/" for ::1 at 2019-04-12 10:00:21 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"fave_food"=>"Kobi Beef", "fave_city"=>"Tokyo", "fave_site"=>"Senso Ji ", "would_revisit"=>true, "biggest_surprise"=>"How many people live in Tokyo! ", "country_id"=>"112", "comment"=>{"fave_food"=>"Kobi Beef", "fave_city"=>"Tokyo", "fave_site"=>"Senso Ji ", "would_revisit"=>true, "biggest_surprise"=>"How many people live in Tokyo! ", "country_id"=>"112"}}
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:23
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:23
+  [1m[36mComment Create (7.2ms)[0m  [1m[32mINSERT INTO "comments" ("fave_food", "fave_city", "fave_site", "would_revisit", "biggest_surprise", "created_at", "updated_at", "country_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fave_food", "Kobi Beef"], ["fave_city", "Tokyo"], ["fave_site", "Senso Ji "], ["would_revisit", true], ["biggest_surprise", "How many people live in Tokyo! "], ["created_at", "2019-04-12 14:00:21.907104"], ["updated_at", "2019-04-12 14:00:21.907104"], ["country_id", 112]]
+  ↳ app/controllers/comments_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:23
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 10:00:21 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (3.9ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/users/" for ::1 at 2019-04-12 10:01:21 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"new", "username"=>"new", "password"=>"[FILTERED]", "email"=>"new@gmail.com", "bio"=>"new"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "password_digest", "email", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "new"], ["username", "new"], ["password_digest", "$2a$10$z801QvofR8D1aNe4t913POEztyEoOb4X55SwYk1Gv8Y0N3egY2/Am"], ["email", "new@gmail.com"], ["bio", "new"], ["created_at", "2019-04-12 14:01:21.167758"], ["updated_at", "2019-04-12 14:01:21.167758"]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 201 Created in 76ms (Views: 1.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:01:23 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:01:26 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 10:01:34 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"new@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"new@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 65ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 10:01:55 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:02:06 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.9ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 10:02:09 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (1.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (2.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 10:02:21 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"danthomp311@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"danthomp311@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danthomp311@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 69ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/countries/227/" for ::1 at 2019-04-12 10:02:23 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mCountry Load (0.9ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 227], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 227]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 10:02:28 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 10:02:49 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:05:30 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (2.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:05:35 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:05:48 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (2.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 10:05:59 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan123@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 66ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:06:05 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:06:09 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:07:54 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (2.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/countries/119/" for ::1 at 2019-04-12 10:21:13 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"119"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 119]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 119]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/countries/11/" for ::1 at 2019-04-12 10:21:19 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (2.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 11]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 11]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 10:21:54 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (1.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 2.8ms)
+
+
+Started PUT "/users/10" for ::1 at 2019-04-12 10:22:12 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"My name is Dan. This is me. ", "id"=>"10", "user"=>{"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"My name is Dan. This is me. "}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "dan123@gmail.com"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Update (12.2ms)[0m  [1m[33mUPDATE "users" SET "bio" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["bio", "My name is Dan. This is me. "], ["updated_at", "2019-04-12 14:22:12.156640"], ["id", 10]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+Completed 200 OK in 30ms (Views: 0.7ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:22:19 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:22:26 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 127ms (Views: 125.2ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/users/10" for ::1 at 2019-04-12 10:22:38 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"I am Dan. ", "id"=>"10", "user"=>{"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"I am Dan. "}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "dan123@gmail.com"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "bio" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["bio", "I am Dan. "], ["updated_at", "2019-04-12 14:22:38.733061"], ["id", 10]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:23:01 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/users/[object%20Object]" for ::1 at 2019-04-12 10:23:07 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"I am Dan. This is me. ", "id"=>"[object Object]", "user"=>{"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"I am Dan. This is me. "}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=[object Object]):
+  
+app/controllers/users_controller.rb:44:in `set_user'
+Started PUT "/users/[object%20Object]" for ::1 at 2019-04-12 10:23:09 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"I am Dan. This is me. ", "id"=>"[object Object]", "user"=>{"name"=>"New Dan", "username"=>"dandan", "email"=>"dan123@gmail.com", "bio"=>"I am Dan. This is me. "}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=[object Object]):
+  
+app/controllers/users_controller.rb:44:in `set_user'
+Started GET "/countries" for ::1 at 2019-04-12 10:23:14 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:23:15 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:23:16 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:23:16 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:23:16 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/countries" for ::1 at 2019-04-12 10:23:16 -0400
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (12.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 99ms (Views: 86.6ms | ActiveRecord: 12.4ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 10:23:25 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"danthomp311@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"danthomp311@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danthomp311@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 71ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/178/" for ::1 at 2019-04-12 10:25:33 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"178"}
+  [1m[36mCountry Load (0.9ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 178], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 178]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 178]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 29ms (Views: 11.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/countries/26/" for ::1 at 2019-04-12 10:27:23 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (137.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 26]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 26]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 147ms (Views: 3.5ms | ActiveRecord: 138.9ms)
+
+
+Started GET "/countries/112/" for ::1 at 2019-04-12 10:27:27 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 112]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/countries/14/" for ::1 at 2019-04-12 10:27:36 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 14]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 14]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/11/" for ::1 at 2019-04-12 10:27:54 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 11]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 11]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 10:33:43 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan123@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 72ms (Views: 0.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/user_token" for ::1 at 2019-04-12 10:38:39 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"dan123@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan123@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/danielthompson/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 201 Created in 77ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 10:38:55 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (1.7ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/countries/154/blogs/" for ::1 at 2019-04-12 10:39:08 -0400
+Processing by BlogsController#create as HTML
+  Parameters: {"title"=>"i like mexico", "body"=>"mexico tacos", "country_id"=>"154", "blog"=>{"title"=>"i like mexico", "body"=>"mexico tacos", "country_id"=>"154"}}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:23
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:23
+  [1m[36mBlog Create (0.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "country_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "i like mexico"], ["body", "mexico tacos"], ["created_at", "2019-04-12 14:39:08.239768"], ["updated_at", "2019-04-12 14:39:08.239768"], ["country_id", 154]]
+  ↳ app/controllers/blogs_controller.rb:23
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:23
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 10:39:08 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/countries/154/comments/" for ::1 at 2019-04-12 10:39:37 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"fave_food"=>"tacos", "fave_city"=>"puerto vallarta", "fave_site"=>"tulum", "would_revisit"=>true, "biggest_surprise"=>"beaches", "country_id"=>"154", "comment"=>{"fave_food"=>"tacos", "fave_city"=>"puerto vallarta", "fave_site"=>"tulum", "would_revisit"=>true, "biggest_surprise"=>"beaches", "country_id"=>"154"}}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:23
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:23
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("fave_food", "fave_city", "fave_site", "would_revisit", "biggest_surprise", "created_at", "updated_at", "country_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["fave_food", "tacos"], ["fave_city", "puerto vallarta"], ["fave_site", "tulum"], ["would_revisit", true], ["biggest_surprise", "beaches"], ["created_at", "2019-04-12 14:39:37.105511"], ["updated_at", "2019-04-12 14:39:37.105511"], ["country_id", 154]]
+  ↳ app/controllers/comments_controller.rb:23
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:23
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 10:39:37 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/countries/154/blogs/14" for ::1 at 2019-04-12 10:39:40 -0400
+Processing by BlogsController#destroy as HTML
+  Parameters: {"country_id"=>"154", "id"=>"14"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:29
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[36mBlog Destroy (0.4ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:31
+Completed 204 No Content in 10ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/countries/154/" for ::1 at 2019-04-12 10:39:42 -0400
+Started GET "/countries" for ::1 at 2019-04-12 10:39:42 -0400
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mCountry Load (2.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:9
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."country_id" = $1[0m  [["country_id", 154]]
+  ↳ app/controllers/countries_controller.rb:10
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 3.2ms)
+
+
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.8ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:5
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 1.8ms)
+
+

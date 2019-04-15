@@ -53,7 +53,6 @@ class App extends Component {
       password: ""
     },
     countryData: [],
-    currentCountry: {},
     toggleLogin: true,
     currentUser: {},
     }
@@ -167,7 +166,7 @@ async handleRegister(e) {
 
 async handleEditUser(e) {
   e.preventDefault()
-  const currentUser = await editUser(this.state.currentUser.id, this.state.editFormData)
+  const currentUser = await editUser(this.state.currentUser, this.state.editFormData)
   console.log(currentUser);
   this.setState((prevState, newState) => ({
     currentUser: currentUser.newUser,
@@ -186,7 +185,6 @@ handleLogout() {
 
 async getCountries() {
 const countryData = await fetchCountries();
-console.log(countryData);
 this.setState({
   countryData: countryData.data,
   });

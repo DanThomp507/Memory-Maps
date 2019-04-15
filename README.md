@@ -41,7 +41,7 @@ the places they've been and access them at a later date.
 - Axios
 - Cors
 - Google Maps React
-- Rails Bulk Insert Gem 
+- Rails Bulk Insert Gem
 
 ## MVP
   - Creating a user account/profile
@@ -55,6 +55,8 @@ the places they've been and access them at a later date.
 
 ## Post-MVP
 - Adding user photos to a particular country's profile page  
+- Implementing a search bar so users can look for a particular country
+as opposed to clicking on the map 
 
 ## Wireframes
 ![Wireframe Image 1](https://res.cloudinary.com/djizyydmp/image/upload/v1555074055/Wireframe1.jpg)
