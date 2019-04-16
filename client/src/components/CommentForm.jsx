@@ -7,60 +7,63 @@ class CommentForm extends Component {
     super(props);
     this.state = {
       commentData: {
-        fave_food: '',
-        fave_city: '',
-        fave_site: '',
+        fave_food: "",
+        fave_city: "",
+        fave_site: "",
         would_revisit: null,
-        biggest_surprise: '',
-        country_id: '',
+        biggest_surprise: "",
+        country_id: ""
       }
     };
     this.handleCommentFormChange = this.handleCommentFormChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleRadio = this.handleRadio.bind(this);
-}
+  }
 
-handleCommentFormChange(e) {
-  const { name, value } = e.target;
-  this.setState(prevState => ({
-    commentData: {
-      ...prevState.commentData,
-      [name]: value
-    }
-  }));
-}
-async handleSubmit(e){
-  e.preventDefault();
-  const resp = await createNewComment(this.props.match.params.country_id, this.state.commentData);
-  console.log(resp);
-  this.setState(prevState => ({
-    commentData: {
-      ...prevState.commentData
-    }
-  }))
-    this.props.history.push(`/countries/${this.props.match.params.country_id}/`)
-}
+  handleCommentFormChange(e) {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      commentData: {
+        ...prevState.commentData,
+        [name]: value
+      }
+    }));
+  }
+  async handleSubmit(e) {
+    e.preventDefault();
+    const resp = await createNewComment(
+      this.props.match.params.country_id,
+      this.state.commentData
+    );
+    console.log(resp);
+    this.setState(prevState => ({
+      commentData: {
+        ...prevState.commentData
+      }
+    }));
+    this.props.history.push(
+      `/countries/${this.props.match.params.country_id}/`
+    );
+  }
 
-async componentDidMount() {
-  this.setState(prevState => ({
-    commentData: {
-      ...prevState.commentData,
-      country_id: this.props.match.params.country_id
-    }
-  }));
-}
-handleRadio(e) {
-     const would_revisit = e.target.value === 'true'
-       ? true
-       : false;
-     console.log(would_revisit);
-     this.setState(prevState => ({
-       commentData: {
-         ...prevState.commentData,
-         would_revisit,
-       }
-     }));
-   }
+  async componentDidMount() {
+    this.setState(prevState => ({
+      commentData: {
+        ...prevState.commentData,
+        country_id: this.props.match.params.country_id
+      }
+    }));
+  }
+  handleRadio(e) {
+    const would_revisit = e.target.value === "true" ? true : false;
+    console.log(would_revisit);
+    this.setState(prevState => ({
+      commentData: {
+        ...prevState.commentData,
+        would_revisit
+      }
+    }));
+  }
   render() {
     return (
       <form className="comment-form" onSubmit={this.handleSubmit}>
@@ -93,16 +96,20 @@ handleRadio(e) {
           onChange={this.handleCommentFormChange}
         />
         <label htmlFor="would_revisit"> Would you revisit?</label>
-	      <input type="radio"
-               name="would_revisit"
-               onChange={this.handleRadio}
-               value="true"/>
-	      Yes
-	      <input type="radio"
-               name="would_revisit"
-               onChange={this.handleRadio}
-               value="false"/>
-	      No
+        <input
+          type="radio"
+          name="would_revisit"
+          onChange={this.handleRadio}
+          value="true"
+        />
+        Yes
+        <input
+          type="radio"
+          name="would_revisit"
+          onChange={this.handleRadio}
+          value="false"
+        />
+        No
         <label htmlFor="biggest_surprise">What was the biggest surprise?</label>
         <input
           type="text"
@@ -113,7 +120,7 @@ handleRadio(e) {
           onChange={this.handleCommentFormChange}
         />
         <button type="submit" onClick={this.handleSubmit}>
-        Submit
+          Submit
         </button>
       </form>
     );

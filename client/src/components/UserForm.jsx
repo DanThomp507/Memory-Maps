@@ -16,69 +16,69 @@ export default props => {
     backButtonText,
     toggleLocal,
     passwordAsk,
-    title,
+    title
   } = props;
 
   const showRegister = !toggle;
   return (
     showRegister && (
       <div className="user-form-container">
-      <h1>{title}</h1>
+        <h1>{title}</h1>
         <form>
           <input
-            id='name'
+            id="name"
             onChange={onChange}
             type="text"
             placeholder="name"
             name="name"
             value={name}
           />
-          <br/>
+          <br />
           <input
-            id='username'
+            id="username"
             onChange={onChange}
             type="text"
             placeholder="username"
             name="username"
             value={username}
           />
-          <br/>
+          <br />
           <input
-            id='user-email'
+            id="user-email"
             onChange={onChange}
             type="text"
             placeholder="Email"
             name="email"
             value={email}
           />
-          <br/>
+          <br />
           <input
-            id='bio'
+            id="bio"
             onChange={onChange}
             type="text"
             placeholder="Bio"
             name="bio"
             value={bio}
           />
-          <br/>
+          <br />
           {passwordAsk && (
             <>
-          <input
-            id='user-password'
-            onChange={onChange}
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={password}
-          />
-          <br/>
-          </>
-        )}
-          <br/>
-          <button id='user-submit' type="submit" onClick={onSubmit}>
+              <input
+                id="user-password"
+                onChange={onChange}
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={password}
+              />
+              <br />
+            </>
+          )}
+          <br />
+          <button id="user-submit" type="submit" onClick={onSubmit}>
             {submitButtonText}
           </button>
-          <button id='user-back' type="submit" onClick={onClick}>
+          <button id="user-back" type="submit" onClick={onClick}>
             {backButtonText}
           </button>
         </form>

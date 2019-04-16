@@ -8,11 +8,7 @@ const Footer = props => {
       <div className="footer-text">
         {show && (
           <>
-            <Link
-            to={"/user/profile"}
-            >
-            Profile
-            </Link>
+            <Link to={"/user/profile"}>Profile</Link>
             <Link to="/logout">Logout</Link>
           </>
         )}

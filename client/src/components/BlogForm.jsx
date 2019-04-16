@@ -7,43 +7,49 @@ class BlogForm extends Component {
     super(props);
     this.state = {
       blogData: {
-        title: '',
-        body: '',
-        country_id: '',
+        title: "",
+        body: "",
+        country_id: ""
       }
     };
     this.handleBlogFormChange = this.handleBlogFormChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-}
+  }
 
-handleBlogFormChange(e) {
-  const { name, value } = e.target;
-  this.setState(prevState => ({
-    blogData: {
-      ...prevState.blogData,
-      [name]: value
-    }
-  }));
-}
-async handleSubmit(e){
-  e.preventDefault();
-  const resp = await createNewBlogPost(this.props.match.params.country_id, this.state.blogData);
-  this.setState(prevState => ({
-    blogData: {
-      ...prevState.blogData
-    }}))
-  console.log('this is from handleSubmit in blogform', this.state.blogData)
-this.props.history.push(`/countries/${this.props.match.params.country_id}/`)
-}
+  handleBlogFormChange(e) {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      blogData: {
+        ...prevState.blogData,
+        [name]: value
+      }
+    }));
+  }
+  async handleSubmit(e) {
+    e.preventDefault();
+    const resp = await createNewBlogPost(
+      this.props.match.params.country_id,
+      this.state.blogData
+    );
+    this.setState(prevState => ({
+      blogData: {
+        ...prevState.blogData
+      }
+    }));
+    console.log("this is from handleSubmit in blogform", this.state.blogData);
+    this.props.history.push(
+      `/countries/${this.props.match.params.country_id}/`
+    );
+  }
 
-async componentDidMount() {
-  this.setState(prevState => ({
-    blogData: {
-      ...prevState.blogData,
-      country_id: this.props.match.params.country_id
-    }
-  }));
-}
+  async componentDidMount() {
+    this.setState(prevState => ({
+      blogData: {
+        ...prevState.blogData,
+        country_id: this.props.match.params.country_id
+      }
+    }));
+  }
   render() {
     return (
       <form className="blog-form" onSubmit={this.handleSubmit}>
@@ -66,9 +72,7 @@ async componentDidMount() {
           className="blog-body"
           onChange={this.handleBlogFormChange}
         />
-        <button type="submit">
-        Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
     );
   }
