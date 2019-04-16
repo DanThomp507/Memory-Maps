@@ -166,10 +166,11 @@ async handleRegister(e) {
 
 async handleEditUser(e) {
   e.preventDefault()
-  const currentUser = await editUser(this.state.currentUser, this.state.editFormData)
+  const currentUser = await editUser(this.state.currentUser.id, this.state.editFormData)
   console.log(currentUser);
   this.setState((prevState, newState) => ({
     currentUser: currentUser.newUser,
+    editFormData: currentUser,
   }));
   this.props.history.push(`/user/edit/`);
 }
