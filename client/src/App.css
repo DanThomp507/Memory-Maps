@@ -209,11 +209,26 @@ button {
     font-size: 2.5rem;
     text-align: center;
   }
-  button {
+  .country-blogs-page-container button {
     cursor: pointer;
     background-color: navy;
     color: white;
-    font-size: 75%;
+    font-size: 12px;
+    height: auto;
+    width: auto;
+    padding: 20px 32px;
+    margin: 1vh 1vh;
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+  }
+  .country-comments-page-container button {
+    cursor: pointer;
+    background-color: navy;
+    color: white;
+    font-size: 8px;
     height: auto;
     width: auto;
     padding: 20px 32px;
@@ -233,7 +248,7 @@ button {
     padding: 5vh 15vh 0 15vh;
     padding-bottom: 0;
     margin-top: 1vh;
-    margin-left: 1vh;
+    margin-left: 5vh;
     margin-right: 15vh;
     margin-bottom: 10vh;
     border-radius: 3%;
