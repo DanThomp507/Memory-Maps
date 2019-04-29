@@ -54,6 +54,7 @@ the places they've been and access them at a later date.
   - Adding comments to a country's page pertaining to favorite foods, cities,
   sites, etc
   - Styled front-end components with CSS
+  - Mobile-responsive CSS design 
 
 ## Post-MVP
 - Adding user photos to a particular country's profile page  
