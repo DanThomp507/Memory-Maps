@@ -211,7 +211,7 @@ button {
   }
   .user-container{
     display: flex;
-    width: 40vw;
+    width: 30vw;
     justify-content: center;
     flex-direction: column;
     background: green;
@@ -248,6 +248,12 @@ button {
     margin-top: 10vh;
     border-radius: 20px;
     border: 3px green solid;
+  }
+  .country-comments-page-container {
+    float: left;
+    width: 50%;
+    margin: auto;
+    text-align: center;
   }
   .footer {
     position: fixed;
